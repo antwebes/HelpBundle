@@ -1,0 +1,29 @@
+{
+    "name" : "antwebes/helpBundle",
+    "description" : "Help bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "pablo"
+    }],
+    "keywords" : [
+        "help bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Ant\\HelpBundle" : ""
+        }
+    },
+    "target-dir" : "Ant/HelpBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "0.1.*-dev"
+        }
+    }
+}
