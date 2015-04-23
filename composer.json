@@ -1,5 +1,5 @@
 {
-    "name" : "antwebes/helpBundle",
+    "name" : "antwebes/help-bundle",
     "description" : "Help bundle",
     "type" : "symfony-bundle",
     "authors" : [{
