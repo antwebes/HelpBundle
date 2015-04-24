@@ -1,0 +1,13 @@
+<p>Antes de nada, piensa si has realizado alguna acción prohibida en el chat... O si has faltado al respeto a algún otro usuario... esta puede ser una razón de expulsión.</p>
+<p>Esta son algunas de las normas que se deben de cumplir en todas las salas de chat:</p>
+{% include "HelpBundle:Channel:Info/rules.html.twig" %}
+<p>Si no has realizado ninguna acción ilegal y sigues creyendo que has sido mal tratado en un canal por parte de alguno de los moderadores.</p>
+<p>Recopila toda la información que puedas que verifique lo que denuncias</p>
+<ul>
+	<li>Anota el nick al que quieres denuncias.</li>
+	<li>La hora en la que ha ocurrido.</li>
+	<li>El canal de chat donde ha ocurrido.</li>
+	<li>Logs, muchos clientes IRC, tienen la posibilidad de guardar los logs que escribes y que recibes.</li>
+	<li>Capturas de pantalla. Si no sabes como hacer, pregunta en el canal #ayuda seguro que allí pueden orientarte, y si no busca en cualquier buscador de internet.</li>
+</ul>
+<p>Una vez tengas toda la información y pruebas que puedas aportar, envianoslo al correo {% if email_contact is defined %}{{ email_contact }}{% endif %} </p>

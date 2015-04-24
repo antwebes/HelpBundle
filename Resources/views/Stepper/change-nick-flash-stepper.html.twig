@@ -1,0 +1,52 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_parent %}<li><a href="{{ path('ant_help_stepper_index') }}">{{ 'Paso a paso' | trans }}</a></li>{% endblock %}
+{% block breadcrumbs_actually %}{{ 'Change nick step by step chat flash' | trans }}{% endblock %}
+
+{% block add_custom_styles_head_css %}
+<style>
+<!--
+h2 {
+	font-size: 26px;
+    font-weight: bolder;
+    margin: 3%;
+}
+.bigNum {
+    font-size: 35px;
+    margin: 25px;
+}
+-->
+</style>
+{% endblock %}
+
+{% block body_container_center %}
+
+	<div class="pin">
+		<span class="thumbnail subtitle-image">
+			<h2><span class="bigNum">1</span>Pincha sobre el boton Mi cuenta del chat</h2>
+			{% image '@HelpBundle/Resources/public/images/chat-flash/cambiar-nick-with-arrow-size-min.png' filter='optipng' output='/images/help/cambiar-nick-with-arrow-size-min.png' %}
+			<img src="{{ asset_url }}" alt="change nick chat flash">
+			{% endimage %}
+		</span>
+	</div>
+	
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">2</span>Verás algo como esto, pincha en cambiar Apodo</h2>			
+		{% image '@HelpBundle/Resources/public/images/chat-flash/tabs-mi-cuenta.png' filter='optipng' output='/images/help/tabs-mi-cuenta.png' %}
+		<img src="{{ asset_url }}" class="img-thumbnail">
+		{% endimage %}
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">3</span>Aparecerá la siguiente pantalla</h2>
+	{% image '@HelpBundle/Resources/public/images/chat-flash/box-change-nick.png' filter='optipng' output='/images/help/box-change-nick.png' %}
+		<img src="{{ asset_url }}" alt="window change nick" class="img-thumbnail">
+	{% endimage %}
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">4</span>Rellena el campo con tu nuevo nick. Introduce contraseña si lo tienes registrado.</h2>
+	{% image '@HelpBundle/Resources/public/images/chat-flash/big-box-change-nick.png' filter='optipng' output='/images/help/big-box-change-nick.png' %}
+	<img src="{{ asset_url }}" alt="big-box-change-nick.png" class="img-thumbnail">
+	{% endimage %}
+	
+{% endblock %}

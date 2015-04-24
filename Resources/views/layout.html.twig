@@ -1,0 +1,29 @@
+{% extends '::layout1column.html.twig' %}
+
+{% set page_register = path("chatea_client_register_user") %}
+{% set page_login = path("_antwebes_chateaclient_login") %}
+{% set page_register_channel = path("chatea_client_register_channel") %}
+{% set page_reset_password = path('chatea_client_reset_password') %}
+{% set page_user_settings = path('chatea_client_user_settings') %}
+
+{% block head_css %}
+	{{ parent() }}
+	{% block styles_head_css %}
+		<style>
+			.text-align-center {
+		    	text-align: center;
+			}
+		</style>
+	{% endblock %}
+	{% block add_custom_styles_head_css %}{% endblock %}
+{% endblock %}
+        
+
+{% block breadcrumbs %}
+	<ol class="breadcrumb">
+	  <li><a href="{{ path('ant_help_index') }}">{{ 'Ayuda' | trans }}</a></li>
+	  {% block breadcrumbs_parent %}{% endblock %}	  
+	  <li class="active">{% block breadcrumbs_actually %}{{ 'Ayuda' | trans }}{% endblock %}</li>	  
+	</ol>
+{% endblock %}
+

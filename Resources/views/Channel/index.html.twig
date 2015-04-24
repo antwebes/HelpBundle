@@ -1,0 +1,257 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Channel' | trans }}{% endblock %}
+
+{% block body_container_center %}
+
+<style>
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+	.text-help {
+	    color: #666666;
+	    font-family: Georgia;
+	    font-size: 16px;
+	    font-style: italic;
+	    line-height: 25px;
+	}
+	h2, h3 {
+	    color: #222;
+	    font-family: Georgia;
+	    font-size: 20px;
+	    font-style: italic;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Toda la ayuda sobre los canales de chateagratis.net{% endtrans %}</h1>
+    <h2 style="text-align: center;margin-bottom:20px;">{% trans %}Quiero consulta la ayuda sobre...{% endtrans %}</h2>
+    <div class="row">
+    	<div class="col-xs-12 col-md-4">
+    		<button data-js-btn="channel-owner" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Un canal mio
+    		</button>
+    	</div>
+    	<div class="col-xs-12 col-md-4">
+    		<button data-js-btn="channel-register" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Quiero registrar un canal
+    		</button>
+    	</div>
+    	<div class="col-xs-12 col-md-4">
+    		<button data-js-btn="channel-foreign" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Un canal de otro usuario
+    		</button>
+    	</div>
+    </div>
+	{# End of first two buttons #}
+    <hr/>
+    
+    {# Here append with jquery options for each data-js-btn #}
+    <div class="row" data-js="show-options"></div>
+
+    {# Begin of channel-owner options #}
+    <div data-js-show="channel-owner" style="display: none" >
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Que necesitas saber sobre tu canal ?{% endtrans %}</h2>
+    	
+    	<div class="col-xs-12 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  <div class="panel-body" data-js-panel="channel-owner-add-moderator">
+			    Moderadores
+			    {# answer #}
+			    <div data-js-panel-info="channel-owner-add-moderator" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			 				{% include "HelpBundle:Channel:Info/moderators.html.twig" %}		 				
+			 			</div>
+			 		</div>
+			    </div>
+			    {# end answer #}
+			  </div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-12 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="channel-owner-topic">
+	    			Como cambio el topic
+	    			{# answer #}
+	    			<div data-js-panel-info="channel-owner-topic" style="display: none">
+	    				<div class="panel panel-default">
+				 			<div class="panel-body">
+					 			{% include "HelpBundle:Channel:Info/topic.html.twig" %}
+				 			</div>
+			 			</div>
+	    			</div>
+	    			{# end answer #}
+	    		</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-12 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="channel-owner-delete-moderator">
+	    			Recibo ataques
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="channel-owner-delete-moderator" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+							{% include "HelpBundle:Channel:Info/receive-attacks.html.twig" %}
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	
+    </div>
+    {# end of channel-owner options #}
+    
+    {# Begin of channel-register options #}
+    <div data-js-show="channel-register" style="display: none">
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Que necesitas saber ?{% endtrans %}</h2>
+    	
+    	<div class="col-xs-12 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  <div class="panel-body" data-js-panel="nick-registered-validate">
+			    ¿ Quien puede registrar un canal ?
+			    {# answer #}
+			    <div data-js-panel-info="nick-registered-validate" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+				 			<p>Cualquier usuario puede registrar canales. Es y será algo gratuito.</p>
+					        <p>Solo debes estar registrado. Para ello solo debes rellenar el <a href="{{ page_register }}">formulario de registro.</a></p>
+					        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
+			 			</div>
+			 		</div>
+			    </div>
+			    {# end answer #}
+			  </div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-12 col-md-4">
+    		<div class="panel panel-default text-align-center">
+				<div class="panel-body" data-js-panel="nick-registered-not-received-email">
+    				¿ Como registro un canal ?
+    			</div>
+    			{# answer #}
+			    <div data-js-panel-info="nick-registered-not-received-email" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			    			<p>Primero debes tener una cuenta de usuario creada.</p>
+			    			<p>Si no la tienes vete a la <a href="{{ page_register }}">página de registro.</a></p>
+			    			<p>Si ya tienes una cuenta de usuario debes de estar logueado, y una vez hayas iniciado sesión podrás registrar tu canal desde <a href="{{ page_register_channel }}">el formulario de crear canal.</a></p>
+						</div>
+					</div>
+				</div>
+				{# end answer #}
+    		</div>
+    	</div>
+    	
+    	<div class="col-xs-12 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-registered-commands-irc">
+	    			Lo he intentado pero he tenido problemas
+	    			{# answer #}
+	    			<div data-js-panel-info="nick-registered-commands-irc" style="display: none">
+	    				<div class="panel panel-default">
+				 			<div class="panel-body">
+				 				<p>Si has seguido todo los pasos, tienes cuenta de usuario ya confirmada y has rellenado el formulario de registrar canal, quizás haya sido un error puntual, vuelva a intentarlo dentro de unos minutos.</p>
+				 				<p>Si el problema persiste..</p>
+				 				<p>Entra en el chat al canal #ayuda quizás allí puedan ayudarte con tu problema.</p>
+				 				<p>Envianos un correo a nuestro email de contacto, enviándonos toda la información posible.</p>
+				 				<p>Puedes encontrar el formulario de contacto al final de la página.</p>
+				 			</div>
+			 			</div>
+	    			</div>
+	    			{# end answer #}
+	    		</div>
+			</div>
+    	</div>
+	</div>
+	{# end of channel-register options #}
+	
+    {# Begin of channel-foreign options #}
+    <div data-js-show="channel-foreign" style="display: none">
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Que necesitas saber ?{% endtrans %}</h2>
+    	
+    	<div class="col-xs-12 col-md-6">
+	    	<div class="panel panel-default text-align-center">
+			  <div class="panel-body" data-js-panel="channel-foreign-ascend">
+			    ¿ Como me hago moderador de un canal ?
+			    {# answer #}
+			    <div data-js-panel-info="channel-foreign-ascend" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			 				{% include "HelpBundle:Channel:Info/ascend.html.twig" %}
+			 			</div>
+			 		</div>
+			    </div>
+			    {# end answer #}
+			  </div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-12 col-md-6">
+    		<div class="panel panel-default text-align-center">
+				<div class="panel-body" data-js-panel="channel-foreign-incorrect-behavior">
+    				Me han tratado de manera incorrecta
+    			</div>
+    			{# answer #}
+			    <div data-js-panel-info="channel-foreign-incorrect-behavior" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			 				{% include "HelpBundle:Channel:Info/incorrect-behavior.html.twig" %}
+						</div>
+					</div>
+				</div>
+				{# end answer #}
+    		</div>
+    	</div>
+	</div>
+	{# end of channel-foreign options #}
+	
+	{# block to show answer #}
+	<hr/>
+    <div id="answer" style="display: none" class="text-help">
+    </div>
+    {# endblock to show answer #}
+	
+	{# Begin block adsense #}
+	<hr/>	
+	<div class="row">
+		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
+	</div>
+	{# End block adsense #}
+
+{% endblock %}
+
+{% block body_js_end %}
+{{ parent() }}
+<script type="text/javascript">
+<!--
+//-->
+$('[data-js-btn]').click(function() {
+	$('#answer').hide();
+	value = $(this).attr('data-js-btn');
+	$('[data-js="show-options"]').show("slow");
+	$('[data-js="show-options"]').html($('[data-js-show="'+value+'"]').html());
+	
+});
+
+//this listen click in second list of buttons and show a answer
+$('[data-js="show-options"]').on('click', '[data-js-panel]', function(){
+	value = $(this).attr('data-js-panel');
+	$('#answer').hide();
+	$('#answer').show("slow");
+	$('#answer').html($('[data-js-panel-info='+value+']').html());
+	
+});
+</script>
+{% endblock %}
+

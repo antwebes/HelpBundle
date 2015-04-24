@@ -1,0 +1,324 @@
+{% extends '::layout1column.html.twig' %}
+
+{% block body_container_center %}
+    <h1>{% trans %}Información sobre la migración de chateagratis.net{% endtrans %}</h1>
+
+    <style>
+        .help-map {
+            background-color: #F9F9F9;
+            border-radius: 3px 3px 3px 3px;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .help-map-list {
+            margin: 15px 0 10px 15px;
+        }
+
+        .help-map ol {
+            display: inline-block;
+            vertical-align: top;
+            width: 46%;
+        }
+
+        .help-map-list li {
+            border-bottom: 1px solid #E9E9E9;
+            list-style: none outside none;
+            margin: 2px 0;
+        }
+
+        .help-map-list li a {
+            color: #C2751A;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .help-map-content h3 {
+            border-bottom: 1px dotted #B97916;
+            color: #B97916;
+            font-size: 20px;
+            line-height: 30px;
+            margin: 40px 0 25px;
+        }
+
+        .help-map-content h4 {
+            color: #737373;
+            font-size: 16px;
+            line-height: 30px;
+            margin: 40px 0 10px;
+            position: relative;
+        }
+    </style>
+
+
+    <div class="help-map">
+
+    <ol class="help-map-list">
+
+        <p>1. ¿En qué consiste?</p>
+
+        <li><a class="faq1 no_navigate" href="#help-anchor-m11">1.1. ¿Porqué cambiamos de red?</a></li>
+        <li><a href="#help-anchor-m12" class="no_navigate">1.2. Qué pasos debo seguir en la migración</a></li>
+    </ol>
+
+    <ol class="help-map-list">
+
+        <p>2. Registros</p><li>
+        <li><a href="#help-anchor-m21" class="no_navigate">2.1. Registro de apodos</a></li>
+        <li><a href="#help-anchor-m22" class="no_navigate">2.2. Registro de salas</a></li>
+        <li><a href="#help-anchor-m23" class="no_navigate">2.3. Ya tengo un apodo registrado</a></li>
+        <li><a href="#help-anchor-m24" class="no_navigate">2.4. Ya tengo una sala registrada</a></li>
+
+    </ol>
+
+    <ol class="help-map-list">
+
+        <p>3. Identificarse en el chat</p>
+
+        <li><a href="#help-anchor-m31" class="no_navigate">3.1. Identificarse vía web</a></li>
+        <li><a href="#help-anchor-m32" class="no_navigate">3.2. Identificarse mediante irc</a></li>
+        <li><a href="#help-anchor-m321" class="no_navigate">&nbsp;&nbsp;3.2.1 Comando Login</a></li>
+        <li><a href="#help-anchor-m322" class="no_navigate">&nbsp;&nbsp;3.2.2 Usando servicio Nick</a></li>
+        <li><a href="#help-anchor-m323" class="no_navigate">&nbsp;&nbsp;3.2.3 Usando el comando pass</a></li>
+        <li><a href="#help-anchor-m324" class="no_navigate">&nbsp;&nbsp;3.2.4 Método obsoletos</a></li>
+        <li><a href="#help-anchor-m33" class="no_navigate">3.3 ¿Olvidaste tu contraseña?</a></li>
+    </ol>
+
+
+    <ol class="help-map-list">
+
+        <p>4. ¿Problemas? </p>
+
+        <li><a href="#help-anchor-m41" class="no_navigate">4.1. No consigo conectarme al chat</a></li>
+        <li><a href="#help-anchor-m42" class="no_navigate">4.2. He sido baneado</a></li>
+        <li><a href="#help-anchor-m43" class="no_navigate">4.3. Están dando mi teléfono en el chat</a></li>
+        <li><a href="#help-anchor-m44" class="no_navigate">4.4. Otros problemas</a></li>
+    </ol>
+
+
+    <div class="help-map-content">
+        <h3>1. ¿En qué consiste?</h3>
+
+        <h4><span id="help-anchor-m11"></span>1.1. ¿Porqué cambiamos de red?</h4>
+
+        <p>En chateagratis, estamos en un proceso de cambio constante, para ofrecerle siempre los mejores servicios.
+            Cada cierto tiempo es necesario hacer cambios estructurales para adaptarse a los tiempos. El chat actual no
+            permitía gran cantidad de funcionalidades que actualmente consideramos básicas para una web, por lo que
+            nos hemos visto forzados a cambiar algunos comandos y a volver a regenerar todas las cuentas de usuarios registrados.
+        </p>
+
+
+
+        <h4><span id="help-anchor-m12"></span>1.2. Qué pasos debo seguir en la migración</h4>
+
+        <p>
+            El cambio de red se producirá de forma automática, no tendrás que realizar ningún cambio. Podrás seguir entrando
+            desde nuestra web como hasta ahora.
+        </p>
+
+
+
+        <h3>2. Registros</h3>
+
+
+        <h4><span id="help-anchor-m21"></span>2.1. Registro de apodos</h4>
+        <p>
+            En cuanto a registros el nuevo chat tiene algunas diferencias con el anterior:
+        </p>
+        <div style="margin:25px 25px">
+            <b>1.2.1 Sólo se permite un apodo por email.</b>
+            <p>
+                A diferencia con el chat anterior que permitia multicuenta, en el nuevo esto no es posible. Creemos que con uno es suficiente,
+                y esto disminuye el problema de encontrar un apodo libre en el chat.
+            </p>
+            <b>1.2.2 Registro vía web de usuarios.</b>
+            <p>
+                Antes el registro sólo era posible vía comando en el chat. Actualmente se realizará mediante la web de chateagratis.net
+                Para registrarte vistia nuestra página de <a href="{{ path("chatea_client_register_user") }}">registro de usuario</a>.
+            </p>
+            <b>1.2.3 Registro a través de irc de usuarios.</b>
+            <p>
+                El registro de apodo a través de irc está deshabilitado por motivos de seguridad e integración con la web.
+                Por lo que para registrarte sólo es posible via web.
+            </p>
+        </div>
+
+        <h4><span id="help-anchor-m22"></span>2.2. Registro de salas</h4>
+
+        <p>
+           A diferencia del antiguo chat, el registro de salas también es indispensable que se realice vía web.
+           Para registrar tu sala sólo tienes que visitar <a href="{{ path("chatea_client_register_channel") }}">registro de salas</a>.
+           Es necesario identificarse en chateagratis.net para poder registrarte.
+
+        </p>
+
+
+        <h4><span id="help-anchor-m23"></span>2.3. Ya tengo un apodo registrado</h4>
+
+        <p>
+            Si en el antiguo chat ya tenías un apodo registrado, tu cuenta ha sido migrada al nuevo chat.
+            Por motivos de seguridad en chateagratis no guardamos tu contraseña original, por lo que es necesario que se vuelva
+            a generar. Para ello debes acudir a la página de <a href="{{ path('chatea_client_reset_password') }}">¿Olvidé mi contraseña?</a>
+        </p>
+        <p>
+            Una vez rellenes el formulario se te enviará un email a tu dirección de correo electrónico con los pasos para establecer
+            una nueva contraseña.
+        </p>
+        <p>
+        <div class="alert alert-danger">
+            <b>Muy Importante:</b> Si con tu dirección de email tenías varios apodos registrados ninguno de estos se habrá migrado.
+            Para ello debes registrar de nuevo el que desees en neustra página de <a href="{{ path("chatea_client_register_user") }}">registro de usuario</a>.
+        </div>
+        </p>
+
+
+
+        <h4><span id="help-anchor-m24"></span>2.4. Ya tengo una sala registrada</h4>
+
+        <p>
+            Si en el antiguo chat tenías una sala registrada, esta ha sido asociada directamente a tu cuenta, por lo que no
+            tendrás que hacer nada.
+        </p>
+        <p>
+        <div class="alert alert-danger">
+            <b>Muy Importante:</b> Si con tu dirección de email tenías varios apodos registrados ninguno de estos se habrá migrado, tu sala
+            no puede ser asociada a ningún apodo. Por lo que deberás registrar primer tu apodo y solicitar que tu sala sea asociada
+            de nuevo a tu cuenta mediante nuestro <a href="{{ path('fw_contact_index') }}">formulario de contacto</a>.
+        </div>
+        </p>
+
+
+        <h3>3. Identificarse en el chat</h3>
+
+        <h4><span id="help-anchor-m31"></span>3.1. Identificarse vía web</h4>
+
+        <p>La forma más sencilla de identificarse en chateagratis.net es usar nuestro <a href="{{ path('_antwebes_chateaclient_login') }}">formulario de acceso</a>. Escribes tu usuario
+        y contraseña  y serás redirigido a la página principal con tu cuenta activada y tu apodo en la caja de texto del chat.
+        </p>
+        <p>
+            A Continuación pulsas en el botón de chatear y sigues los pasos hasta la página de chat.
+            <br><br>
+            Si no recuerdas la contraseña de tu apodo acude a nuestra página de <a href="{{ path('chatea_client_reset_password') }}">¿Olvidé mi contraseña?</a>
+        </p>
+
+
+        <h4><span id="help-anchor-m32"></span>3.2. Identificarse mediante irc</h4>
+
+        <h4><span id="help-anchor-m321"></span>3.2.1 Comando Login</h4>
+
+        <p>
+            Entras a la red con tu nick o con un nick de invitado y escrbies el comando /login tu_nick password
+
+        <blockquote>/login [apodo] [contraseña]</blockquote>
+        Ejemplo:
+        <blockquote>/login borja 1234</blockquote>
+
+        Este comando te identifica y te establece el apodo seleccionado.
+        </p>
+
+        <h4><span id="help-anchor-m322"></span>3.2.2 Usando servicio Nick</h4>
+
+        <p>
+            Te conectas de forma normal con tu nick o un nick sin registrar. Dispones de un periodo de tiempo de 30 segundos para escribir el comando de identificación.
+            <br> <br>
+            Recibirás un aviso como el siguiente
+            <br> <br>
+
+            <blockquote>
+            <pre>
+            -NiCK- Este nick está registrado y protegido. Si es tu nick,
+            -NiCK- escribe /msg NiCK IDENTIFY contraseña.  Si no,
+            -NiCK- por favor, elige un nick diferente.
+            -NiCK- Si no lo cambias en X segundos, yo cambiaré tu nick.
+            </pre>
+            </blockquote>
+            <br>
+            Durante ese periodo de tiempo debes escribir el siguiente mensaje
+
+            <blockquote>
+            /msg nick identify tu_nick tu_password
+            </blockquote>
+
+            Si los datos son correctos verás otro aviso
+            <blockquote>
+            -NiCK- Contraseña aceptada - Has sido reconocido.
+            </blockquote>
+
+            A continuación si has entrado con tu nick debes cambiar tu apodo por el que has introducido en la identificación
+            <blockquote>
+            /nick tu_nick
+            </blockquote>
+
+            En caso de que tu contraseña sea incorrecta tu nick ser cambiado a Guest3567332
+        </p>
+
+        <h4><span id="help-anchor-m323"></span>3.2.3 Usando el comando pass</h4>
+        <p>
+
+            Durante la conexión del usuario antes del /nick se envia el commando /pass contraseña
+            <blockquote>
+            < PASS contraseña
+            < NICK nickname
+            </blockquote>
+
+            Esto se configura en la mayoría de clientes de irc, en el campo "Contraseña de servidor". En el introduces
+            tu contraseña de apodo y esto te identificará de forma automática en la red.
+        </p>
+
+        <h4><span id="help-anchor-m324"></span>3.2.4 Métodos obsoletos</h4>
+        <p>
+            <div class="alert alert-danger">
+            En el nuevo chat han sido marcados como obsoletos los métodos de identificación tradicionales.
+            </div>
+
+            <blockquote>
+                /nick usuairo:contraseña
+            </blockquote>
+
+            <blockquote>
+                /nick usuairo!contraseña
+            </blockquote>
+
+            Por lo que deberás utilizar uno de los sistemas anteriores para acceder a tu cuenta.
+
+        </p>
+
+        <h4><span id="help-anchor-m33"></span>3.3 ¿Olvidaste tu contraseña?</h4>
+        <p>
+
+            Dirígete a nuestra página de <a href="{{ path('chatea_client_reset_password') }}">¿Olvidé mi contraseña?</a>
+
+        </p>
+
+
+        <h3>4. ¿Problemas?</h3>
+
+        <h4><span id="help-anchor-m41"></span>4.1 No consigo conectarme al chat</h4>
+        <p>
+            Ponte en contacto con nosotros mediante nuestro <a href="{{ path('fw_contact_index') }}">formulario de contacto</a>
+        </p>
+
+        <h4><span id="help-anchor-m42"></span>4.2 He sido baneado</h4>
+        <p>
+            Si has sido baneado debes ponerte en contacto con el moderador de la sala para revisar si has inclupido las políticas de la sala.
+        </p>
+
+        <h4><span id="help-anchor-m43"></span>4.3 Están dando mi teléfono en el chat</h4>
+        <p>
+            Si alguien está suplantando su identidad en el chat debes apuntar el seudónimo y la hora en el que se realiza.
+            Una vez apuntados estos datos te pones en contacto con nosotros mediante nuestro <a href="{{ path('fw_contact_index') }}">formulario de contacto</a>.
+
+        </p>
+        <p>
+            Acto seguido debes denunciar a dicho usuario junto los datos de apodo, hora de conexión en tu comisaría de policía.
+        </p>
+
+        <h4><span id="help-anchor-m44"></span>4.4 Otros problemas</h4>
+        <p>
+            Para cualquier otro problema contacta con nosotros en nuestro <a href="{{ path('fw_contact_index') }}">formulario de contacto</a>.
+        </p>
+
+    </div>
+
+
+
+{% endblock %}

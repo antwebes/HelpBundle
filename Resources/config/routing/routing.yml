@@ -1,0 +1,58 @@
+ant_help_index:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Default:index.html.twig'
+        
+ant_help_migration:
+    path: /migracion
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Help:migration.html.twig'
+
+ant_help_register_nickname:
+    path: /registrar-apodo
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Help:registerNickname.html.twig'
+
+ant_help_nick_index:
+    path: /nick
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:User:nick_index.html.twig'
+
+ant_help_channel_index:
+    path: /channel
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Channel:index.html.twig'
+
+ant_help_account_index:
+    path: /account
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Account:index.html.twig'
+
+ant_help_report_index:
+    path: /report
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Report:index.html.twig'
+
+ant_help_stepper_index:
+    path: /stepper
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Stepper:index.html.twig'
+              
+ant_help_stepper:
+    path: /stepper/{template}
+    defaults:
+        _controller: HelpBundle:Show:stepper
+        
+ant_help_command_index:
+    path: /commands
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'HelpBundle:Command:index.html.twig'

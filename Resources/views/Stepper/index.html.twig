@@ -1,0 +1,103 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Step by Step' | trans }}{% endblock %}
+
+{% block body_container_center %}
+
+<style>
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+	.text-help {
+	    color: #666666;
+	    font-family: Georgia;
+	    font-size: 16px;
+	    font-style: italic;
+	    line-height: 25px;
+	}
+	h2, h3 {
+	    color: #222;
+	    font-family: Georgia;
+	    font-size: 20px;
+	    font-style: italic;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Aquí podrás ver la ayuda paso a paso{% endtrans %}</h1>
+    <div class="row">
+    	<div class="col-xs-12 col-md-6" data-js-btn="chat-flash">
+    		<button type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Chat flash
+    		</button>
+    		{% image '@HelpBundle/Resources/public/images/chat-flash/index.png' filter='optipng' output='/images/help/chat-flash/index.png' %}
+				<img src="{{ asset_url }}" class="img-responsive">
+			{% endimage %}
+    	</div>
+    	<div class="col-xs-12 col-md-6" data-js-btn="chat-movil">
+    		<button type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Chat móvil
+    		</button>
+    		{% image '@HelpBundle/Resources/public/images/kiwi/index.png' filter='optipng' output='/images/help/kiwi/index.png' %}
+				<img src="{{ asset_url }}" class="img-responsive">
+			{% endimage %}
+    	</div>
+    </div>
+	{# End of first two buttons #}
+    <hr/>
+    
+    {# Here append with jquery options for each data-js-btn #}
+    <div class="row" data-js="show-options"></div>
+
+    {# Begin of "chat-flash" options #}
+    <div data-js-show="chat-flash" style="display: none" >
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}Pasos sobre el chat flash{% endtrans %}</h2>
+    	<a href="{{ path('ant_help_stepper', {'template': 'change-nick-flash'}) }}">
+	    	<button data-js-btn="chat-kiwi" type="button" style="min-height: 100px;" class="btn btn-primary btn-lg btn-block">
+	    		{% trans %}Pasos para cambiarme de nick{% endtrans %}
+	    	</button>
+    	</a>
+    	
+    </div>
+    {# end of chat-flash options #}
+    
+    {# Begin of chat-movil options #}
+    <div data-js-show="chat-movil" style="display: none">
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}Pasos sobre el chat movil{% endtrans %}</h2>
+    	<a href="{{ path('ant_help_stepper', {'template': 'change-nick-kiwi'}) }}">
+	    	<button data-js-btn="chat-kiwi" type="button" style="min-height: 100px;" class="btn btn-primary btn-lg btn-block">
+	    		{% trans %}Pasos para cambiarme de nick{% endtrans %}
+	    	</button>
+    	</a>
+	</div>
+	{# end of chat-movil options #}
+	
+	{# Begin block adsense #}
+	<hr/>
+	<div class="row">
+		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
+	</div>
+	{# End block adsense #}
+
+{% endblock %}
+
+{% block body_js_end %}
+{{ parent() }}
+<script type="text/javascript">
+<!--
+//-->
+$('[data-js-btn]').click(function() {
+	value = $(this).attr('data-js-btn');
+	$('[data-js="show-options"]').hide();
+	$('[data-js="show-options"]').show("slow");
+	$('.img-responsive').hide("slow");
+	$('[data-js="show-options"]').html($('[data-js-show="'+value+'"]').html());
+	
+});
+</script>
+{% endblock %}
+

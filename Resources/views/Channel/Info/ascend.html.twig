@@ -1,0 +1,11 @@
+<p>Para hacerte moderador de un canal el primer requisito es tener un nick registrado.</p>
+<p>Si ya estás registrado, lee el paso 2</p>
+<ol>
+	<li>{% include "HelpBundle:User:Info/register.html.twig" %}</li>
+	<li>
+		<p>Solo un usuario con nivel mayor de 10, te podrá hacer moderador del canal, así que deberás dirigirte a él/ella.</p>
+		<p>Lo mas fácil es que hables con el fundador del canal, puedes saber quien es el fundador de un canal escribe en el chat:</p>
+		<p><code>/msg chan info #ELCANAL</code></p>
+		<p>Si quieres saber mas acerca de los comandos, vete a la <a href="{{ path('ant_help_index') }}">página principal de ayuda</a> y dale a comandos IRC.</p>
+	</li>
+</ol>

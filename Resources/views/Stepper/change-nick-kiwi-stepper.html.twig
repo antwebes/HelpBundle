@@ -1,0 +1,47 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Change nick step by step chat kiwi' | trans }}{% endblock %}
+
+{% block add_custom_styles_head_css %}
+<style>
+<!--
+h2 {
+	font-size: 26px;
+    font-weight: bolder;
+    margin: 3%;
+}
+.bigNum {
+    font-size: 35px;
+    margin: 25px;
+}
+-->
+</style>
+{% endblock %}
+
+{% block body_container_center %}
+
+	<h2><span class="bigNum">1.a</span>Antes de entrar al chat. <small>Para entrar a este chat en la página de avatar, debes seleccionar la opción móvil.</small></h2>
+	{% image '@HelpBundle/Resources/public/images/kiwi/page-login-kiwi.png' filter='optipng' output='/images/kiwi/page-login-kiwi.png' %}			
+	<img src="{{ asset_url }}" alt="change nick chat flash" class="img-thumbnail">
+	{% endimage %}
+	
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">2.a</span>Puedes seleccionar nick y canal</h2>			
+	{% image '@HelpBundle/Resources/public/images/kiwi/page-login-kiwi-arrows.png' filter='optipng' output='/images/help/kiwi/page-login-kiwi-arrows.png' %}
+		<img src="{{ asset_url }}" class="img-thumbnail">
+	{% endimage %}
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">1.b</span>Cuando ya estás conectado, pincha sobre tu nick, donde indica la flecha.</h2>
+	{% image '@HelpBundle/Resources/public/images/kiwi/kiwi-connected.png' filter='optipng' output='/images/help/kiwi/kiwi-connected.png' %}
+		<img src="{{ asset_url }}" alt="window change nick" class="img-thumbnail">
+	{% endimage %}
+	
+	<div class="clearfix visible-xs-block"></div>
+	<h2><span class="bigNum">2.b</span>Te saldrá esta ventana para escribir tu nick. <small> Acuerdate de no incluir espacios o carácteres especiales o no podrás cambiar de nick.</small></h2>
+	{% image '@HelpBundle/Resources/public/images/kiwi/kiwi-connected-nick-changing.png' filter='optipng' output='/images/help/kiwi/kiwi-connected-nick-changing.png' %}
+		<img src="{{ asset_url }}" alt="big-box-change-nick.png" class="img-thumbnail">
+	{% endimage %}
+	
+{% endblock %}

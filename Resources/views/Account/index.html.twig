@@ -1,0 +1,89 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Account' | trans }}{% endblock %}
+
+{% block body_container_center %}
+<style>
+
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Account{% endtrans %}</h1>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Cerrar sesión
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="panel-body">
+	        <p>Para cerrar sesión solo debes de pinchas en la barra superior de la página sobre tu nombre.</p>
+	        <p>Se desplegará un menú en donde te aparecerá "Cerrar sesión"</p>
+	        <p>Una vez hayas cerrado sesión en la barra superior en lugar de tu nick aparecerá "Tu Cuenta" para poder acceder de nuevo a ella.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	          Alguien se está haciendo pasar por mi
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	      <div class="panel-body">
+	      	{% include "HelpBundle:Account:Info/identity-impersonation.html.twig" %}
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingThree">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          Como accedo a mi cuenta
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	      <div class="panel-body">
+	      	{% include "HelpBundle:Account:Info/access.html.twig" %}
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingFour">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	          ¿ A que datos tienen acceso los demás usuarios ?
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	      <div class="panel-body">
+	        <p>Los demás usuarios nunca podrán ver tu contraseña.</p>
+	        <p>Ni nosotros nunca te la vamos a pedir, la contraseña es privada de cada usuario y no se la digas a nadie nunca.</p>
+	        <p>Los usuarios de la página no podrán ver tu correo electrónico, se trata de un dato privado que solo los administradores pueden conocer, en caso de necesidad para solucionar alguna incidencia o denuncia.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	{# Begin block adsense #}
+	<hr/>	
+	<div class="row">
+		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
+	</div>
+	{# End block adsense #}
+
+{% endblock %}

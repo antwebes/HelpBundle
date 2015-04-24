@@ -1,0 +1,347 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Nick' | trans }}{% endblock %}
+
+{% block body_container_center %}
+<style>
+
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Nick / Apodo{% endtrans %}</h1>
+    <h2 style="text-align: center;margin-bottom:20px;">{% trans %}Actualmente...{% endtrans %}</h2>
+    <div class="row">
+    	<div class="col-xs-12 col-md-6">
+    		<button data-js="btn-not-nick" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			No tengo nick registrado
+    		</button>
+    	</div>
+    	<div class="col-xs-12 col-md-6">
+    		<button data-js="btn-nick-registered" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
+    			Ya he registrado mi nick
+    		</button>
+    	</div>
+    </div>
+	{# End of first two buttons #}
+    <hr/>
+
+    {# Begin of not nick options #}
+    <div data-js="show-not-nick" style="display: none" class="row">
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Que necesitas saber ?{% endtrans %}</h2>
+    	
+    	<div class="col-xs-6">
+	    	<div class="panel panel-default text-align-center">
+			  <div class="panel-body" data-js-panel="nick-1">
+			    Que es un nick o apodo
+			    {# answer #}
+			    <div data-js-panel-info="nick-1" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			 			<p>Un apodo es el nombre con el que se identificará en el chat.</p>
+			 			<p>Solo hay un apodo por email, es decir es único.</p>
+			 			<p>Y ningún otro usuario podrá utilizarlo.</p>
+			 			<p>Este apodo no puede contener espacios, comenzar pon números ni caracteres especiales como "#" o "&". </p>
+			 			</div>
+			 		</div>
+			    </div>
+			    {# end answer #}
+			  </div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-6">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-2">
+	    			¿ Porqué debo registrar un nick ?
+	    			{# answer #}
+	    			<div data-js-panel-info="nick-2" style="display: none">
+	    				<div class="panel panel-default">
+				 			<div class="panel-body">
+					 			<p>
+						            En chateagratis.net no es necesario registrarse, puedes chatear con un nick de invitado, pero ese apodo
+						            sólo será tuyo durante el tiempo de conexión. Una vez salgas del chat podrá ser usado por otra persona.
+						        </p>
+						        <p>
+						            Si deseas que tu apodo sólo pueda ser usado por tí y que nadie más lo utilize, lo que debes hacer es registrar
+						            tu apodo. Esto además te permitirá acceder a múltiples opciones exclusivas sólo para usuarios registrados.
+						        </p>
+				 			</div>
+			 			</div>
+	    			</div>
+	    			{# end answer #}
+	    		</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-6 col-md-4">
+    		<div class="panel panel-default text-align-center">
+				<div class="panel-body" data-js-panel="not-nick-register">
+    				Como registrar nick/apodo
+    			</div>
+    			<div data-js-panel-info="not-nick-register" style="display: none">
+	    			<div class="panel panel-default">
+				 		<div class="panel-body">
+				 			{% include "HelpBundle:User:Info/register.html.twig" %}
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	
+    	<div class="col-xs-6 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-error">
+	    		He intentado registrarme pero me dió error
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="nick-error" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+				 			<ul>
+				 				<li>Para registrar tu nick necesitas tener un email válido. Donde te enviaremos un email para confimar tu cuenta.</li>
+					            <li>El nick que quieres registrar ya está registrado:
+					            	<ul>
+					            		<li>Deberás escoger otro nick diferente</li>
+					            		<li>Si has sido tú quien lo ha registrado pero no te acuerdas de la contraseña, dale al enlace de olvidé contraseña en <a href="{{ page_login }}">la página de login.</a></li>
+					            	</ul>
+					            </li>
+					            
+					            <li>Si tienes algún otro problema en el formulario de registro ponte en contacto con nosotros a través del email de contacto, o de nuestras redes sociales.</li>
+					        </ul>
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-6 col-md-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-change">
+	    		Quiero cambiarme de nick en el chat
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="nick-change" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+			 				{% include "HelpBundle:User:Info/change.html.twig" %}
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	
+    </div>
+    {# end of not nick options #}
+    
+    {# Begin of nick register options #}
+    <hr/>
+    <div data-js="show-nick-registered" style="display: none" class="row">
+    	<h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Que necesitas saber ?{% endtrans %}</h2>
+    	
+    	<div class="col-xs-12">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-registered-join">
+	    			Entrar al chat con mi nick
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="nick-registered-join" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+							<p>Debes tener una cuenta de usuario registrada y acceder a ella de la siguiente manera:</p>
+							{% include "HelpBundle:Account:Info/access.html.twig" %}
+							<p>Una vez estés identificado en la web, al acceder al chat, te entra automáticamente con tu nick.</p>
+							<p>Si no es así desde el chat puedes cambiarte el nick, escribiendo en el chat el comando:</p>
+							<p><code>/login TUNICK TUPASSWORD</code></p>
+							<p>Para el nick Barack_Obama y la contraseña "1234" será: </p>
+							<p><code>/login Barack_Obama 1234</code></p>
+							<p>También puedes consultar <a href="{{ path('ant_help_stepper_index') }}"> las intrucciones paso a paso con imagenes como cambiarte de nick</a>.</p>
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-6">
+	    	<div class="panel panel-default text-align-center">
+			  <div class="panel-body" data-js-panel="nick-registered-validate">
+			    Como valido mi cuenta
+			    {# answer #}
+			    <div data-js-panel-info="nick-registered-validate" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+				 			<p>
+					            Para validar tu cuenta debes acudir a tu dirección de email introducida durante el registro. Recibirás
+					            un email desde la cuenta "Chat Gratis" con el asunto "Confirma tu cuenta".
+					        </p>
+					        <p>
+					           Abre el email y pulsa en el botón de "Confirma tu cuenta Ahora!"
+					        </p>
+					        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
+			 			</div>
+			 		</div>
+			    </div>
+			    {# end answer #}
+			  </div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-6">
+    		<div class="panel panel-default text-align-center"">
+				<div class="panel-body" data-js-panel="nick-registered-not-received-email">
+    				No me llega el email de confirmación
+    			</div>
+    			{# answer #}
+			    <div data-js-panel-info="nick-registered-not-received-email" style="display: none">
+			    	<div class="panel panel-default">
+			 			<div class="panel-body">
+			    			<p>
+					           Si tu cuenta no está confirmada, puedes loguearte en la web igualmente. Una vez introduzcas tus credenciales verás en la parte superior de nuestra web el siguiente mensaje:
+					        </p>
+					        {% image '@HelpBundle/Resources/public/images/help/resend-email.png' %}
+					        <img src="{{ asset_url }}" alt="Reenviar email" />
+					        {% endimage %}
+					        <p>
+					           deberás pinchar en el enlace de ese mensaje e introducir el email con el que te has registrado en el formulario y pulsa el botón de "reenviarme email de confirmación"
+					        </p>
+					        <p><spam style="color:red;">Atención!!</spam> Solo verás un mensaje como el de arriba en tu página una vez hayas iniciado sesión en la web desde <a href="{{ path('_antwebes_chateaclient_login') }}">la página de login.</a></p>
+					        <p>
+					            Revisa tu carpeta de spam dentro de tu correo electrónico. Si el email está en esta carpeta márcalo como "No es spam".
+					        </p>
+						</div>
+					</div>
+				</div>
+				{# end answer #}
+    		</div>
+    	</div>
+    	
+    	<div class="col-xs-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-registered-commands-irc">
+	    			Comandos irc
+	    			{# answer #}
+	    			<div data-js-panel-info="nick-registered-commands-irc" style="display: none">
+	    				<div class="panel panel-default">
+				 			<div class="panel-body">
+				 				<p>¿Donde escribo los comandos? Los comandos se escriben en la misma barra desde donde chateas con los demas usuarios, pero los comandos empiezan con /</p>
+					 			<p>Estos son algunos de los comandos mas útiles con nick</p>
+					 			<ul>
+					 				<li>Activar tu nick en el irc:
+					 					<ul>
+					 						<li><code>/msg nick identify TUNICK TUPASSWORD</code></li>
+					 					</ul>
+					 				</li>
+					 				<li>Cambiar de nick: 
+					 					<ul>
+					 						<li><code>/nick TUNUEVONICK</code></li>
+					 					</ul>
+					 				</li>
+					 				<li>Iniciar sesión en el chat irc: 
+					 					<ul>
+					 						<li><code>/login TUNICK TUPASSWORD</code></li>
+					 					</ul>
+					 				</li>
+					 			</ul>
+				 			</div>
+			 			</div>
+	    			</div>
+	    			{# end answer #}
+	    		</div>
+			</div>
+    	</div>
+    	
+    	<div class="col-xs-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-registered-not-exist">
+	    		Mi nick no existe en irc
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="nick-registered-not-exist" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+				 			<p>Si tu nick no existe en irc, puede ser por dos motivos:</p>
+				 			<ul>
+				 				<li>Tu nick ha caducado en el chat</li>
+				 				<li>Nunca has entrado al chat con ese nick</li>
+				 			</ul>
+				 			<p>La solución es iniciar sesión en la web, y acceder al chat, con tu nick.</p>
+				 			<p>Si sigue sin estar registrado tu nick, escribe el comando: <code>/msg nick identify TUNICK TUPASSWORD</code></p>
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	<div class="col-xs-4">
+	    	<div class="panel panel-default text-align-center">
+			  	<div class="panel-body" data-js-panel="nick-registered-password">
+	    		Mi contraseña
+	    		</div>
+	    		{# answer #}
+	    		<div data-js-panel-info="nick-registered-password" style="display: none">
+    				<div class="panel panel-default">
+			 			<div class="panel-body">
+							{% include "HelpBundle:User:Info/password.html.twig" %}
+			 			</div>
+		 			</div>
+    			</div>
+    			{# end answer #}
+			</div>
+    	</div>
+    	
+	</div>
+	{# end of nick register options #}
+	
+	{# block to show answer #}
+	<hr/>
+    <div id="answer" style="display: none">
+    </div>
+    {# endblock to show answer #}
+	
+	{# Begin block adsense #}
+	<hr/>	
+	<div class="row">
+		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
+	</div>
+	{# End block adsense #}
+	
+	
+
+{% endblock %}
+
+{% block body_js_end %}
+{{ parent() }}
+<script type="text/javascript">
+<!--
+//-->
+$('[data-js="btn-not-nick"]').click(function() {
+	$('#answer').hide();
+	$('[data-js="show-nick-registered"]').hide();
+	$('[data-js="show-not-nick"]').show( "slow" );
+});
+
+$('[data-js="btn-nick-registered"]').click(function() {
+	$('#answer').hide();
+	$('[data-js="show-not-nick"]').hide();
+	$('[data-js="show-nick-registered"]').show( "slow" );
+});
+
+$('[data-js-panel]').click(function() {
+	value = $(this).attr('data-js-panel');
+	$('#answer').hide();
+	$('#answer').show("slow");
+	$('#answer').html($('[data-js-panel-info='+value+']').html());
+	
+});
+</script>
+{% endblock %}
+

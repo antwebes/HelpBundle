@@ -1,0 +1,176 @@
+<style>
+        .help-map {
+            background-color: #F9F9F9;
+            border-radius: 3px 3px 3px 3px;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .help-map-list {
+            margin: 15px 0 10px 15px;
+        }
+
+        .help-map ol {
+            display: inline-block;
+            vertical-align: top;
+            width: 46%;
+        }
+
+        .help-map-list li {
+            border-bottom: 1px solid #E9E9E9;
+            list-style: none outside none;
+            margin: 2px 0;
+        }
+
+        .help-map-list li a {
+            color: #C2751A;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .help-map-content h3 {
+            border-bottom: 1px dotted #B97916;
+            color: #B97916;
+            font-size: 20px;
+            line-height: 30px;
+            margin: 40px 0 25px;
+        }
+
+        .help-map-content h4 {
+            color: #737373;
+            font-size: 16px;
+            line-height: 30px;
+            margin: 40px 0 10px;
+            position: relative;
+        }
+    </style>
+
+
+    <div class="help-map">
+
+    <ol class="help-map-list">
+
+        <p>1. Registro de apodo</p>
+
+        <li><a class="faq1 no_navigate" href="#help-anchor-m11">1.1. ¿Qué es un apodo o nick?</a></li>
+        <li><a class="faq1 no_navigate" href="#help-anchor-m12">1.2. ¿Porqué debo registrar mi apodo?</a></li>
+        <li><a class="faq1 no_navigate" href="#help-anchor-m13">1.3. ¿Cómo registro mi apodo?</a></li>
+        <li><a class="faq1 no_navigate" href="#help-anchor-m14">1.4. ¿Cómo registro varios apodos?</a></li>
+    </ol>
+
+    <ol class="help-map-list">
+        <p>2. Validar cuenta</p><li>
+        <li><a href="#help-anchor-m21" class="no_navigate">2.1. ¿Cómo valido mi cuenta?</a></li>
+        <li><a href="#help-anchor-m22" class="no_navigate">2.2. No me llega el email de confirmación</a></li>
+    </ol>
+
+    <ol class="help-map-list">
+
+        <p>3. Preguntas frecuentes</p>
+
+        <li><a href="#faq-register-a" class="no_navigate">A. ¿Cuándo caduca mi apodo?</a></li>
+        <li><a href="#faq-register-b" class="no_navigate">B. ¿Porqué mi apodo no está registrado en el chat pero si está registrado en la web?</a></li>
+        <li><a href="#faq-register-c" class="no_navigate">C. ¿Cómo doy de baja mi apodo en el chat?</a></li>
+
+    </ol>
+
+
+
+
+
+    <div class="help-map-content">
+        <h3>1. Registro de apodo</h3>
+
+        <h4><span id="help-anchor-m11"></span>1.1. ¿Qué es un apodo o nick?</h4>
+
+        <p>
+            Se conoce como apodo, nick o nombre al seudónimo utilizado durante chateas. Este apodo no puede contener espacios,
+            comenzar pon números ni caracteres especiales como "#" o "&".
+        </p>
+
+
+
+
+        <h4><span id="help-anchor-m12"></span>1.2. ¿Porqué debo registrar mi apodo?</h4>
+
+        <p>
+            En chateagratis.net no es necesario registrarse, puedes chatear con un nick de invitado, pero ese apodo
+            sólo será tuyo durante el tiempo de conexión. Una vez salgas del chat podrá ser usado por otra persona.
+        </p>
+        <p>
+            Si deseas que tu apodo sólo pueda ser usado por tí y que nadie más lo utilize, lo que debes hacer es registrar
+            tu apodo. Esto además te permitirá acceder a múltiples opciones exclusivas sólo para usuarios registrados.
+        </p>
+
+        <h4><span id="help-anchor-m13"></span>1.3. ¿Cómo registro mi apodo?</h4>
+        <p>
+            Para registrarte visita nuestra página de <a href="{{ page_register }}" target="_blank">registro de usuario</a>.
+        </p>
+        
+        <h4><span id="help-anchor-m14"></span>1.4. ¿Cómo registro varios apodos?</h4>
+
+        <p>Solo se puede registrar un apodo para cada email. Entonces con un mismo email no puedes registrar varios apodos diferentes.</p>
+        
+
+        <h3>2. Validar cuenta</h3>
+
+
+        <h4><span id="help-anchor-m21"></span>2.1. ¿Cómo valido mi cuenta?</h4>
+        <p>
+            Para validar tu cuenta debes acudir a tu dirección de email introducida durante el registro. Recibirás
+            un email desde la cuenta "Chat Gratis" con el asunto "Confirma tu cuenta".
+        </p>
+        <p>
+           Abre el email y pulsa en el botón de "Confirma tu cuenta Ahora!"
+        </p>
+        <p>
+            Si no te llega el email de confirmación dirígete a <a href="#help-anchor-m22" class="no_navigate">2.2. No me llega el email de confirmación</a>
+        </p>
+
+
+
+        <h4><span id="help-anchor-m22"></span>2.2. No me llega el email de confirmación</h4>
+
+        <p>
+           Si tu cuenta no está confirmada, puedes loguearte en la web igualmente. Introduce tus credenciales Pero verás en la parte superior de nuestra web el siguiente mensaje:
+        </p>
+        {% image '@HelpBundle/Resources/public/images/help/resend-email.png' %}
+        <img src="{{ asset_url }}" alt="Reenviar email" />
+        {% endimage %}
+        <p>
+           deberás pinchar en el enlace de ese mensaje e introducir el email con el que te has registrado en el formulario y pulsa el botón de "reenviarme email de confirmación"
+        </p>
+        <p>
+            Revisa tu carpeta de spam dentro de tu correo electrónico. Si el email está en esta carpeta márcalo como "No es spam".
+        </p>
+
+
+        <h3>Preguntas frecuentes</h3>
+
+        <h4><span id="faq-register-a"></span>B. ¿Cuándo caduca mi apodo?</h4>
+
+        <p>El apodo caducará a los 42 días en el chat irc.</p>
+        <p>Pero ese nick en la base de datos no caduca nunca, y lo podrás volver a registrar en el irc, aunque hayan pasado esos 42 días.</p>
+        <p>Para activar tu nick en irc escribe el comando:</p>
+        <blockquote>/msg nick identify TUNICK TUPASSWORD</blockquote>
+        Ejemplo, si tu nick es Michael_jackson y tu contraseña 1234, tendrás que escribir el comando:
+        <blockquote>/msg nick identify Michael_jackson 1234</blockquote>
+        
+        <h4><span id="faq-register-b"></span>C. ¿Porqué mi apodo no está registrado en el chat pero si está registrado en la web?</h4>
+        
+        <p>Si tu nick no está registrado en el chat irc, pero en la web ya está registrado. Puede ser por varios motivos:</p>
+        <ul>
+        	<li>Tu nick ha caducado en irc.</li>
+        	<li>Nunca has entrado al chat.</li>
+        </ul>
+        <p>Para solucionar este problema, puedes acceder al chat, y escribir en el chat el comando "nick identify tunick tupassword".</p>
+        <p>Imagina que tu nick es Michael_jackson y tu contraseña 1234, deberás escribir:</p>
+        <blockquote>/msg nick identify Michael_jackson 1234</blockquote>
+        
+        <h4><span id="faq-register-c"></span>D. ¿Cómo doy de baja mi apodo en el chat?</h4>
+        
+        <p>Para darte de baja envíanos un email a nuestro correo de contacto, indicando en el asunto del mensaje: Darse de baja</p>
+        <p>Y eliminaremos todos tus datos en las próximas 24 horas.</p>
+        
+
+        
+    </div>

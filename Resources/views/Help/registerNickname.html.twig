@@ -1,0 +1,10 @@
+{% extends '::layout1column.html.twig' %}
+
+{% block body_container_center %}
+    <h1>{% trans %}Como registrar tu apodo o nick{% endtrans %}</h1>
+	{% set page_register = path("chatea_client_register_user") %}
+    
+    {% include "HelpBundle:Help:registerNickname_content.html.twig" with {'page_register': page_register} %}
+
+
+{% endblock %}
