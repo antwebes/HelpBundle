@@ -1,0 +1,19 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}{{ 'Report' | trans }}{% endblock %}
+
+{% block body_container_center %}
+
+	{# Begin of first two buttons #}
+	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Denuncias sobre el chat{% endtrans %}</h1>
+    
+    <p>Envíanos un correo con toda la información posible a ant@antweb.es</p>
+    
+	{# Begin block adsense #}
+	<hr/>	
+	<div class="row">
+		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
+	</div>
+	{# End block adsense #}
+
+{% endblock %}
