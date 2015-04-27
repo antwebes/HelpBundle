@@ -60,43 +60,28 @@
 	<p>1. {% trans %}Nick Commands available{% endtrans %}</p>
 
 	<li><a class="faq1 no_navigate" href="#help-anchor-m11">1.1. {% trans %}Introduction, tutorial{% endtrans %}</a></li>
-	<li><a href="#nickserv/ajoin" class="no_navigate">1.2. {% trans %}AJOIN Manage your auto join list{% endtrans %}</a></li>
-	<li><a href="#nickserv/alist" class="no_navigate">1.3. {% trans %}ALIST List channels you have access on {% endtrans %}</a></li>
-	<li><a href="#nickserv/cert" class="no_navigate">1.4. {% trans %}CERT Modify the nickname client certificate list{% endtrans %}</a></li>
-	<li><a href="#nickserv/confirm" class="no_navigate">1.5. {% trans %}CONFIRM Confirm a passcode{% endtrans %}</a></li>	
-	<li><a href="#nickserv/access" class="no_navigate">1.6. {% trans %}ACCESS Modify the list of authorized addresses{% endtrans %}</a></li>
-	<li><a href="#nickserv/identify" class="no_navigate">1.7. {% trans %}IDENTIFY Identify yourself with your password{% endtrans %}</a></li>
-	<li><a href="#nickserv/update" class="no_navigate">1.8. {% trans %}UPDATE Updates your current status, i.e. it checks for new memos{% endtrans %}</a></li>
-	<li><a href="#nickserv/info" class="no_navigate">1.9. {% trans %}INFO Displays information about a given nickname{% endtrans %}</a></li>
-	<li><a href="#nickserv/list" class="no_navigate">1.10. {% trans %}LIST List all registered nicknames that match a given pattern{% endtrans %}</a></li>
-    <li><a href="#nickserv/logout" class="no_navigate">1.11. {% trans %}LOGOUT Reverses the effect of the IDENTIFY command{% endtrans %}</a></li>
-    <li><a href="#nickserv/recover" class="no_navigate">1.12. {% trans %}RECOVER Regains control of your nick{% endtrans %}</a></li>
-    <li><a href="#nickserv/set" class="no_navigate">1.14. {% trans %}SET Set options, including kill protection{% endtrans %}</a></li>
-    <li><a href="#nickserv/status" class="no_navigate">1.15. {% trans %}STATUS Returns the owner status of the given nickname{% endtrans %}</a></li>
-    <li><a href="#nickserv/language" class="no_navigate">1.16. {% trans %}LANGUAGE Change the language in which the information is displayed{% endtrans %}</a></li>
+	<li><a href="#nickserv/ajoin" class="no_navigate">1.2. AJOIN {% trans %}nick.ajoin.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/alist" class="no_navigate">1.3. ALIST {% trans %}nick.alist.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/access" class="no_navigate">1.6. ACCESS {% trans %}nick.access.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/identify" class="no_navigate">1.7. IDENTIFY {% trans %}nick.identify.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/update" class="no_navigate">1.8. UPDATE {% trans %}nick.update.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/info" class="no_navigate">1.9. INFO {% trans %}nick.info.index{% endtrans %}</a></li>
+	<li><a href="#nickserv/list" class="no_navigate">1.10. LIST {% trans %}nick.list.index{% endtrans %}</a></li>
+    <li><a href="#nickserv/logout" class="no_navigate">1.11. LOGOUT {% trans %}nick.logout.index{% endtrans %}</a></li>
+    <li><a href="#nickserv/recover" class="no_navigate">1.12. RECOVER {% trans %}nick.recover.index{% endtrans %}</a></li>
+    <li><a href="#nickserv/set" class="no_navigate">1.14. SET {% trans %}nick.set.index{% endtrans %}</a></li>
+    <li><a href="#nickserv/status" class="no_navigate">1.15. STATUS {% trans %}nick.status.index{% endtrans %}</a></li>
+    <li><a href="#nickserv/language" class="no_navigate">1.16. LANGUAGE {% trans %}nick.language.index{% endtrans %}</a></li>
 
 </ol>
 
 <ol class="help-map-list">
 
-	<p>2. {{ "Nick commands disabled" | trans }}</p><li>
-	<a href="#nickserv/group" class="no_navigate">2.1. {% trans %}GROUP Join a group{% endtrans %}</a></li>
-	<li><a href="#nickserv/drop" class="no_navigate">2.2. {% trans %}DROP Cancel the registration of a nickname{% endtrans %}</a></li>
-	<li><a href="#nickserv/glist" class="no_navigate">2.3. {% trans %}GLIST Lists all nicknames in your group{% endtrans %}</a></li>
-	<li><a href="#nickserv/ungroup" class="no_navigate">2.4. {% trans %}UNGROUP Remove a nick from a group{% endtrans %}</a></li>
-	<li><a href="#nickserv/register" class="no_navigate">2.5. {% trans %}REGISTER Register a nickname{% endtrans %}</a></li>
-	
-	
+	<p>2. {{ "Channel commands" | trans }}</p>
 
-</ol>
-
-<ol class="help-map-list">
-
-	<p>3. {{ "Channel commands" | trans }}</p>
-
-	<li><a href="#help-anchor-m31" class="no_navigate">3.1. {% trans %}Introduction, tutorial{% endtrans %}</a></li>
-	<li><a href="#chanserv/register" class="no_navigate">3.2. {% trans %}REGISTER Modify the list of authorized addresses {% endtrans %}</a></li>
-	<li><a href="#chanserv/drop" class="no_navigate">3.3. {% trans %}DROP delete a chat room{% endtrans %}</a></li>
+	<li><a href="#help-anchor-m21" class="no_navigate">2.1. {% trans %}Introduction, tutorial{% endtrans %}</a></li>
+	<li><a href="#chanserv/register" class="no_navigate">2.2. REGISTER {% trans %}chan.register.index{% endtrans %}</a></li>
+	<li><a href="#chanserv/drop" class="no_navigate">2.3. DROP {% trans %}chan.drop.index{% endtrans %}</a></li>
 
 </ol>
 
@@ -112,12 +97,12 @@
 	<p>{% trans %}For more information on a specific command, type <b>/msg Nick HELP</b> command.{% endtrans %}</p>
 	
 	
-	<h4><span id="nickserv/ajoin"></span>1.2. {% trans %}AJOIN Manage your auto join list{% endtrans %} &nbsp;<a href="#nickserv/ajoin"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/ajoin"></span>1.2. AJOIN {% trans %}nick.ajoin.index{% endtrans %} &nbsp;<a href="#nickserv/ajoin"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick AJOIN [ADD|DEL|LIST] {nickname} channel {key}</blockquote>
 
 	<p>{% trans %}This command manages your auto join list. When you identify you will automatically join the channels on your auto join list. Services Operators may provide a nick to modify other users' auto join lists.{% endtrans %}</p>
 	
-	<h4><span id="nickserv/alist"></span>1.3. {% trans %}ALIST List channels you have access on {% endtrans %}&nbsp;<a href="#nickserv/alist"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/alist"></span>1.3. ALIST {% trans %}nick.alist.index{% endtrans %}&nbsp;<a href="#nickserv/alist"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick ALIST [level]</blockquote>
 
 	<p>{% trans %}Lists all channels you have access on. {% endtrans %}</p>
@@ -141,60 +126,12 @@
 		    </code>
 		</li>
 	</ul>
-	
-	<h4><span id="nickserv/cert"></span>1.4. {% trans %}CERT Modify the nickname client certificate list{% endtrans %}&nbsp;<a href="#nickserv/cert"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg CERT [ADD|DEL|LIST] {nickname} {fingerprint}</blockquote>
-	<p>{% trans %}Modifies or displays the certificate list for your nick.{% endtrans %}</p>
-    <p>{% trans %}If you connect to IRC and provide a client certificate with a matching fingerprint in the cert list, your nick will be automatically identified to services.{% endtrans %}</p> 
-    <p>{% trans %}Services Operators may provide a nick to modify other users' certificate lists.{% endtrans %}</p>
-	
-	<p>Examples:</p>
-	<ul>
-		<li>
-			<p>
-		        {% trans %}
-		        Adds this fingerprint to the certificate list and
-		        automatically identifies you when you connect to IRC using this certificate.
-		        {% endtrans %}
-		    </p>
-		    <p><code>
-		        <strong>/msg CERT ADD {fingerprint}</strong>
-		    </code></p>
-	    </li>
-	    <li>
-		   	<p>{% trans %}Reverses the previous command.{% endtrans %}</p>
-		    <p><code>
-		        <strong>/msg Nick CERT DEL {fingerprint}</strong>
-		    </code></p>
-	    </li>
-	    <li>
-		    <p>{% trans %}Displays the current certificate list.{% endtrans %}</p>
-		    <p><code>
-		        <strong>/msg Nick CERT LIST</strong>
-		    </code></p>
-	    </li>
-    </ul>
-	
-	
-	
-	<h4><span id="nickserv/confirm"></span>1.5. {% trans %}CONFIRM Confirm a passcode{% endtrans %}&nbsp;<a href="#nickserv/confirm"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg Nick CONFIRM {passcode}</blockquote>
-	<p>{% trans %}This command is used by several commands as a way to confirm changes made to your account.{% endtrans %}</p>
-	<p>{% trans %}This is most commonly used to confirm your email address once you register or change it.{% endtrans %}</p>
-    <p>{% trans %}This is also used after the RESETPASS command has been used to force identify you to your nick so you may change your password.{% endtrans %}</p>
        
-       
-	<h4><span id="nickserv/access"></span>1.6. {% trans %}ACCESS Modify the list of authorized addresses{% endtrans %}&nbsp;<a href="#nickserv/access"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/access"></span>1.6. ACCESS {{'nick.access.index' | trans}}&nbsp;<a href="#nickserv/access"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick ACCESS [ADD|DEL|LIST] {user@host}</blockquote>
 	
-	<p>{% trans %}
-        Modifies or displays the access list for your nick.  This
-        is the list of addresses which will be automatically
-        recognized by Nick as allowed to use the nick.  If
-        you want to use the nick from a different address, you
-        need to send an IDENTIFY command to make Nick
-        recognize you.
-        {% endtrans %}
+	<p>
+	{% trans %}nick.access.description{% endtrans %}	
     </p>
     <p>Examples:</p>
     <ul>
@@ -222,35 +159,21 @@
 	    </li>
     </ul>
 
-    <h4><span id="nickserv/identify"></span>1.7. {% trans %}IDENTIFY Identify yourself with your password{% endtrans %}&nbsp;<a href="#nickserv/identify"><i class="icon-arrow-right"></i></a></h4>
+    <h4><span id="nickserv/identify"></span>1.7. IDENTIFY {{'nick.identify.index' | trans}}&nbsp;<a href="#nickserv/identify"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick IDENTIFY {password}</blockquote>
-	<p>{% trans %}Tells Nick that you are really the owner of this
-        nick.  Many commands require you to authenticate yourself
-        with this command before you use them.  The password
-        should be the same one you sent with the REGISTER
-        command.{% endtrans %}</p>
+	<p>{% trans %}nick.identify.description{% endtrans %}</p>
         
-	<h4><span id="nickserv/update"></span>1.8. {% trans %}UPDATE Updates your current status, i.e. it checks for new memos{% endtrans %}&nbsp;<a href="#nickserv/update"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/update"></span>1.8. UPDATE {{'nick.update.index' | trans}}&nbsp;<a href="#nickserv/update"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick UPDATE</blockquote>
-	<p>{% trans %}pdates your current status, i.e. it checks for new memos,
-        sets needed chanmodes (ModeonID) and updates your vhost and
-        your userflags (lastseentime, etc).{% endtrans %}</p>
+	<p>{% trans %}nick.update.description{% endtrans %}</p>
 	
-	<h4><span id="nickserv/info"></span>1.9. {% trans %}INFO Displays information about a given nickname{% endtrans %}&nbsp;<a href="#nickserv/info"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/info"></span>1.9. INFO {{'nick.info.index' | trans}}&nbsp;<a href="#nickserv/info"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick INFO nickname [ALL]</blockquote>
-	<p>{% trans %}Displays information about the given nickname, such as
-        the nick's owner, last seen address and time, and nick
-        options. If you are identified for the nick you're
-        getting information for and ALL is specified, you will
-        be shown all the information; regardless of whether
-        it's hidden or not.{% endtrans %}</p>
+	<p>{% trans %}nick.info.description{% endtrans %}</p>
 	
-	<h4><span id="nickserv/list"></span>1.10. {% trans %}LIST List all registered nicknames that match a given pattern{% endtrans %}&nbsp;<a href="#nickserv/list"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/list"></span>1.10. LIST {{'nick.list.index' | trans}}&nbsp;<a href="#nickserv/list"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick list pattern</blockquote>
-	<p>{% trans %}Lists all registered nicknames which match the given
-        pattern, in nick!user@host format.  Nicks with the
-        PRIVATE option set will not be displayed.
-        Note that a pattern preceding with a '#' specifies a range.{% endtrans %}</p>
+	<p>{% trans %}nick.list.description {% endtrans %}</p>
 	<p>Examples</p>
 	<ul>
 		<li>
@@ -272,43 +195,22 @@
 	</ul>
         
         
-	<h4><span id="nickserv/logout"></span>1.11. {% trans %}LOGOUT Reverses the effect of the IDENTIFY command{% endtrans %}&nbsp;<a href="#nickserv/logout"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/logout"></span>1.11. LOGOUT {{'nick.logout.index' | trans}}&nbsp;<a href="#nickserv/logout"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick LOGOUT</blockquote>
-	<p>{% trans %}This reverses the effect of the IDENTIFY command, i.e.
-        make you not recognized as the real owner of the nick
-        anymore. Note, however, that you won't be asked to reidentify
-        yourself.{% endtrans %}</p>
+	<p>{% trans %}nick.logout.description{% endtrans %}</p>
         
-	<h4><span id="nickserv/recover"></span>1.12. {% trans %}RECOVER Regains control of your nick{% endtrans %}&nbsp;<a href="#nickserv/recover"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/recover"></span>1.12. RECOVER {{'nick.recover.index' | trans}}&nbsp;<a href="#nickserv/recover"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>msg Nick RECOVER nickname [password]</blockquote>
-	<p>{% trans %} Allows you to recover your nickname if someone else has
-        taken it; this does the same thing that Nick does
-        automatically if someone tries to use a kill-protected
-        nick.{% endtrans %}</p>
+	<p>{{ 'nick.recover.description' | trans}}</p>
 	    <p>
-        {% trans %}
-        When you give this command, Nick will bring a fake
-        user online with the same nickname as the user you're
-        trying to recover your nick from.  This causes the IRC
-        servers to disconnect the other user.  This fake user will
-        remain online for Nick to ensure that the other
-        user does not immediately reconnect; after that time, you
-        can reclaim your nick.  Alternatively, use the RELEASE
-        command (/msg Nick HELP RELEASE) to get the nick
-        back sooner.
-        {% endtrans %}
-    </p>
-    <p>
-        {% trans %}
-        In order to use the RECOVER command for a nick, your
-        current address as shown in /WHOIS must be on that nick's
-        access list, you must be identified and in the group of
-        that nick, or you must supply the correct password for
-        the nickname.
-        {% endtrans %}
+	    {{ 'nick.recover.description_2' | trans }}
+    	</p>
+        
+        
+    <p>{{ 'nick.recover.description_3' | trans }}
     </p>
     
-	<h4><span id="nickserv/set"></span>1.14. {% trans %}SET Set options, including kill protection{% endtrans %}&nbsp;<a href="#nickserv/set"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/set"></span>1.14. SET {{'nick.set.index' | trans}}&nbsp;<a href="#nickserv/set"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick SET option parameters</blockquote>
 	<p>{% trans %}Sets various nickname options.  option can be one of:{% endtrans %}</p>
 	<ul>
@@ -328,20 +230,15 @@
     </ul>
 	
 	
-	<h4><span id="nickserv/status"></span>1.15. {% trans %}STATUS Returns the owner status of the given nickname{% endtrans %}&nbsp;<a href="#nickserv/status"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/status"></span>1.15. STATUS {{'nick.status.index' | trans}}&nbsp;<a href="#nickserv/status"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick STATUS {nick}</blockquote>
-	<p>{% trans %}Returns whether the user using the given nickname is
-        recognized as the owner of the nickname.  The response has
-        this format:{% endtrans %}</p>
+	<p>{{ 'nick.status.description' | trans }}</p>
         
 	<code>
             nickname status-code
         </code>
         <p>
-        {% trans %}
-        where nickname is the nickname sent with the command, and
-        status-code is one of the following:
-        {% endtrans %}
+        {% trans %}where nickname is the nickname sent with the command, and status-code is one of the following:{% endtrans %}
          </p>
         <ul>
             <li><strong>0</strong> {% trans %}no such user online or nickname not registered{% endtrans %}</li>
@@ -350,14 +247,10 @@
             <li><strong>3</strong> {% trans %}user recognized as owner via password identification{% endtrans %}</li>
         </ul>
         <p>
-        {% trans %}
-        Up to sixteen nicknames may be sent with each command; the
-        rest will be ignored. If no nickname is given, your status
-        will be returned.
-        {% endtrans %}
+        {% trans %}Up to sixteen nicknames may be sent with each command; the rest will be ignored. If no nickname is given, your status will be returned.{% endtrans %}
         </p>
         
-	<h4><span id="nickserv/language"></span>1.16. {% trans %}LANGUAGE Change the language in which the information is displayed{% endtrans %}&nbsp;<a href="#nickserv/status"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="nickserv/language"></span>1.16. LANGUAGE {{'nick.language.index' | trans}}&nbsp;<a href="#nickserv/status"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Nick SET LANGUAGE {language}</blockquote>
 	<p>{% trans %}Set language to services:{% endtrans %}</p>
         
@@ -372,48 +265,22 @@
     </p>
     <code> /msg nick help set language </code>
 	
-    
-	<h3>2. {{ "Nick commands disabled" | trans }}</h3>
+	<h3>2. {{ "Channel commands" | trans }}</h3>
 
-	<h4><span id="nickserv/group"></span>2.1.{% trans %}GROUP Join a group{% endtrans %}&nbsp;<a href="#nickserv/group"><i class="icon-arrow-right"></i></a></h4>
-		<blockquote>/msg Nick GROUP</blockquote>
-		<p>{% trans %}This command is not available in chats free network{% endtrans %}</p>
-
-	<h4><span id="nickserv/drop"></span>2.2. {% trans %}DROP Cancel the registration of a nickname{% endtrans %}&nbsp;<a href="#nickserv/drop"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg Nick DROP</blockquote>
-	<p>{% trans %}The irc command drop nick is disabled in network chats free.{% endtrans %}</p>
-	<p>{% trans %}If you wish delete the your nick, You are going to personal dashboard at web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can delete your account here.{% endtrans %}</p>
-	
-	<h4><span id="nickserv/glist"></span>2.3. {% trans %}GLIST Lists all nicknames in your group{% endtrans %}&nbsp;<a href="#nickserv/glist"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg Nick GLIST</blockquote>
-	<p>{% trans %}This command is not available in chats free network{% endtrans %}</p>
-	
-
-	<h4><span id="nickserv/ungroup"></span>2.4. {% trans %}UNGROUP Remove a nick from a group{% endtrans %}&nbsp;<a href="#nickserv/ungroup"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg Nick UNGROUP {nick}</blockquote>	
-	<p>{% trans %}This command is not available in chats free network{% endtrans %}</p>
-		
-	<h4><span id="nickserv/register"></span>2.5. {% trans %}REGISTER Register a nickname{% endtrans %}&nbsp;<a href="#nickserv/register"><i class="icon-arrow-right"></i></a></h4>
-	<blockquote>/msg Nick REGISTER password [email]</blockquote>	
-	<p>{% trans %}The irc command register nick is disabled in network chats free. {% endtrans %}</p>
-	<p>{% trans %}If you wish register the your nick, You are going to web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can register your account here.{% endtrans %}</p>
-	
-	
-	<h3>3. {{ "Channel commands" | trans }}</h3>
-
-	<h4><span id="help-anchor-m31"></span>3.1. {% trans %}Introduction, tutorial{% endtrans %}</h4>
+	<h4><span id="help-anchor-m21"></span>2.1. {% trans %}Introduction, tutorial{% endtrans %}</h4>
 	<p>{% trans %}Chan is equivalent to ChanServ to other networks. It is our network will be Chan.{% endtrans %}</p>
 	<p>{% trans %}Chan allows you to control various aspects of channels.{% endtrans %}</p>
 	<p>{% trans %}Chan can often prevent malicious users from "taking over" channels by limiting who is allowed channel operator privileges.{% endtrans %}</p>  
 	<p>{% trans %}Available commands are listed below; to use them, type /msg Chan command.{% endtrans %}</p>
 	<p>{% trans %}For more information on a specific command, type <b>/msg Chan HELP</b> command.{% endtrans %}</p>
 
-	<h4><span id="chanserv/register"></span>3.2. {% trans %}REGISTER Modify the list of authorized addresses {% endtrans %}&nbsp;<a href="#chanserv/register"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="chanserv/register"></span>2.2. REGISTER {{'chan.register.index' | trans}}&nbsp;<a href="#chanserv/register"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Chan REGISTER channel password description</blockquote>
-	<p>{% trans %}The irc command register channel is disabled in network chats free. If you wish register the your channel,You are going to web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can register your channels here .{% endtrans %}</p>
+	<p>{{ 'chan.register.description' | trans }}</p>
 
-	<h4><span id="chanserv/drop"></span>3.3. {% trans %}DROP delete a chat room{% endtrans %}&nbsp;<a href="#chanserv/drop"><i class="icon-arrow-right"></i></a></h4>
+	<h4><span id="chanserv/drop"></span>2.3. DROP {{'chan.drop.index' | trans}}&nbsp;<a href="#chanserv/drop"><i class="icon-arrow-right"></i></a></h4>
 	<blockquote>/msg Chan DROP</blockquote>
+	<p>{{ 'chan.drop.description' | trans }}</p>
 	<p>{% trans %}The irc command drop channel is disabled in network chats free. If you wish drop your channel, You are going dashboard in web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can delete your channels here .{% endtrans %}</p>
 
 	

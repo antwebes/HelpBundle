@@ -1,0 +1,97 @@
+stepper.change_nick.chat_movil: Cambia paso a paso el nick en chat movil
+'Step by Step': 'Paso a paso'
+'Aquí podrás ver la ayuda paso a paso': 'Aquí podrás ver la ayuda paso a paso'
+'Pasos sobre el chat flash': 'Pasos sobre el chat flash'
+'Pasos para cambiarme de nick': 'Pasos para cambiarme de nick'
+'Pasos sobre el chat movil': 'Pasos sobre el chat movil'
+'Paso a paso': 'Paso a paso'
+'Change nick step by step chat flash': 'Cambia paso a paso el nick en chat flash'
+'Información sobre la migración de chateagratis.net': 'Información sobre la migración de chateagratis.net'
+'Como registrar tu apodo o nick': 'Como registrar tu apodo o nick'
+Ayuda: Ayuda
+'Ayuda sobre chateagratis.net': 'Ayuda sobre chateagratis.net'
+'¿ Sobre que tema necesitas ayuda ?': '¿ Sobre que tema necesitas ayuda ?'
+Nick: Nick
+'Nick / Apodo': 'Nick / Apodo'
+Actualmente...: Actualmente...
+'¿ Que necesitas saber ?': '¿ Que necesitas saber ?'
+Channel: Canal
+'Toda la ayuda sobre los canales de chateagratis.net': 'Toda la ayuda sobre los canales de chateagratis.net'
+'Quiero consulta la ayuda sobre...': 'Quiero consulta la ayuda sobre...'
+'¿ Que necesitas saber sobre tu canal ?': '¿ Que necesitas saber sobre tu canal ?'
+'Service Irc Commands to network chatsfree.net': 'Comandos irc en la red de chat'
+'Nick Commands available': 'Comandos dicponibles para nick'
+'Introduction, tutorial': 'Introduccion, tutorial'
+nick.ajoin.index: Gestiona tu lista de auto entrada
+nick.alist.index: Lista los canales a los que tienes acceso
+nick.access.index: Modifica la lista de personas autorizadas
+nick.identify.index: Te identifica con tu contraseña
+nick.update.index: Actualizar tu estado actual, es decir, comprueba si hay nuevos memos
+nick.info.index: Muestra información sobre el nick dado
+nick.list.index: Lista todos los nicks registrados que coinciden con el patrón dado
+nick.logout.index: Dá marcha atrás a los efectos del comando IDENTIFY
+nick.recover.index: Recupera el control de tu nick
+nick.set.index: Introduce opciones, incluyendo protecciones kill
+nick.status.index: Devuelve el estado del nick dado
+nick.language.index: Cambia el lenguaje en el que se muestra la información
+'Channel commands': 'Comandos de Channel'
+chan.register.index: Modifica la lista de direcciones autorizadas
+chan.drop.index: Eliminar una sala de chat
+'Nick is equivalent to NickServ to other networks. It is our network will be Nick.': 'Nick es equivalente a NickServ en otra redes. En esta red será Nick.'
+'Nick allows you to have a nickname and prevent others from using it.': 'Nick te permite tener un nick propio, y evitar que otra persona lo utilice.'
+'The following commands allow maintenance of nicknames; to use them, type /msg Nick command.': 'El siguiente comando permite la gestión de apodos; para usarlos, escribe /msg Nick command.'
+'For more information on a specific command, type <b>/msg Nick HELP</b> command.': 'Para mas información sobre un comando especifico, escribe <b>/msg NICK HELP</b> command.'
+'This command manages your auto join list. When you identify you will automatically join the channels on your auto join list. Services Operators may provide a nick to modify other users'' auto join lists.': 'Este comando gestiona la lista de auto entrada. Cuando te identificas en el chat, automáticamente entrarás a los canales que tengas en tu lista. Los servicios de operador pueden modifiar las listas de entrada de otros usuarios.'
+'Lists all channels you have access on.': 'Lista todos los canales a los que tienes acceso'
+'Optionally, you can specify a level in XOP or ACCESS format.': 'Opcionalmente puedes especificar un nivel en formato XOP or ACCESS.'
+'The resulting list will only include channels where you have the given level of access.': 'El resultado de la lista, incluirá los canales en los que tengas algún nivel asignado.'
+Examples: Ejemplos
+'Lists all channels where you have Founder access.': 'Lista todos los canales donde tienes acceso de fundador.'
+'Lists all channels where you have AOP access or greater.': 'Lista todos los canales donde tienes acceso AOP o mayor.'
+'Lists all channels where you have level 10 access or greater.': 'Lista todos los canales donde tienes nivel 10 o mayor.'
+'nick.access.description' : "Modifica o muestra la lista de acceso de tu nick. Esto es la lista de direcciones que serán automáticamente reconocidas por NICK para permitir usar el nick. Si quieres usar el nick desde una diferente dirección, necesitas envíar el comando IDENTIFY para que NICK te reconozca."
+'Allows access to user anyone from any machine in the bepeg.com domain.': 'Permite acceder al usuario desde cualquier máquina en el dominio bepeg.com.'
+'Reverses the previous command.': 'Revierte el comando anterior.'
+'Displays the current access list.': 'Muestra la lista de acceso actual.'
+'nick.identify.description' : 'Le dice a NICK que eres realmente el propietario del nick. Algunos comandos requieren que te autentiques antes de usarlo. La contraseá debería ser la misma con la que te has registrado.'
+'nick.update.description' : 'Actualiza tu estado reciente, es decir. Comprueba si hay nuevos memos, cambia modos de canales necesarios ( ModeonID) y actualizar tu vhost y tu "userflags" (última vez visto, etc).'
+'nick.info.description' : 'Muestra información sobre el nick dado , como el propietario del nick, la última direccion y hora, y opciones del nick. Si estás identificado con ese nick y pides información sobre él, recibirás TODA la información, esté oculta o no.'
+"nick.list.description" : "Listar todos los nick registrados que coinciden con este patrón, con este formato nick!user@host. Los nicks con la opción PRIVATE no se mostrarán. Ten en cuenta que el patrón precedido con un '#' indica un rango."
+'Lists all nicks owned by joeuser@foo.com.': 'Listar todos los nicks para joeuser@foo.com.'
+'Lists all registered nicks with Bot in their names (case insensitive).': 'Listar todos los nick registrados con Bot en su nombre (sensible a mayúsculas).'
+'Lists all nicks owned by users in the bar.org domain.': 'Listar todos los nicks que tienen bar.org en dominio.'
+'Lists nicks numbers 50-100.': 'Lista los nicks del 50 al 100.'
+'nick.logout.description' : "Esto reinvierte los efectos del comando IDENTIFY, es decir ya no te reconoce como el propietario real del nick. Ten en cuenta, sin embargo, que no se te pedirá identificarte mas."
+"When you give this command, Nick will bring a fake\n        user online with the same nickname as the user you're\n        trying to recover your nick from.  This causes the IRC\n        servers to disconnect the other user.  This fake user will\n        remain online for Nick to ensure that the other\n        user does not immediately reconnect; after that time, you\n        can reclaim your nick.  Alternatively, use the RELEASE\n        command (/msg Nick HELP RELEASE) to get the nick\n        back sooner.": "__When you give this command, Nick will bring a fake\n        user online with the same nickname as the user you're\n        trying to recover your nick from.  This causes the IRC\n        servers to disconnect the other user.  This fake user will\n        remain online for Nick to ensure that the other\n        user does not immediately reconnect; after that time, you\n        can reclaim your nick.  Alternatively, use the RELEASE\n        command (/msg Nick HELP RELEASE) to get the nick\n        back sooner."
+"In order to use the RECOVER command for a nick, your\n        current address as shown in /WHOIS must be on that nick's\n        access list, you must be identified and in the group of\n        that nick, or you must supply the correct password for\n        the nickname.": "__In order to use the RECOVER command for a nick, your\n        current address as shown in /WHOIS must be on that nick's\n        access list, you must be identified and in the group of\n        that nick, or you must supply the correct password for\n        the nickname."
+'Sets various nickname options.  option can be one of:': '__Sets various nickname options.  option can be one of:'
+'Sets whether services should set channel status modes on you automatically.': '__Sets whether services should set channel status modes on you automatically.'
+'Set the display of your group in Services': '__Set the display of your group in Services'
+'Associate an E-mail address with your nickname': '__Associate an E-mail address with your nickname'
+'Associate a greet message with your nickname': '__Associate a greet message with your nickname'
+'Hide certain pieces of nickname information': '__Hide certain pieces of nickname information'
+'Enable or disable keep modes': '__Enable or disable keep modes'
+'Turn protection on or off': '__Turn protection on or off'
+'Set the language Services will use when messaging you': '__Set the language Services will use when messaging you'
+'Set your nickname password': '__Set your nickname password'
+'Prevent the nickname from appearing in the LIST command': '__Prevent the nickname from appearing in the LIST command'
+'Turn nickname security on or off': '__Turn nickname security on or off'
+'Associate a URL with your account': '__Associate a URL with your account'
+'STATUS Returns the owner status of the given nickname': '__STATUS Returns the owner status of the given nickname'
+"Returns whether the user using the given nickname is\n        recognized as the owner of the nickname.  The response has\n        this format:": "__Returns whether the user using the given nickname is\n        recognized as the owner of the nickname.  The response has\n        this format:"
+"where nickname is the nickname sent with the command, and\n        status-code is one of the following:": "__where nickname is the nickname sent with the command, and\n        status-code is one of the following:"
+'no such user online or nickname not registered': '__no such user online or nickname not registered'
+'user not recognized as nickname''s owner': '__user not recognized as nickname''s owner'
+'user recognized as owner via access list only': '__user recognized as owner via access list only'
+'user recognized as owner via password identification': '__user recognized as owner via password identification'
+"Up to sixteen nicknames may be sent with each command; the\n        rest will be ignored. If no nickname is given, your status\n        will be returned.": "__Up to sixteen nicknames may be sent with each command; the\n        rest will be ignored. If no nickname is given, your status\n        will be returned."
+'Set language to services:': '__Set language to services:'
+'This example set language to english, you can see help with :': '__This example set language to english, you can see help with :'
+'Chan is equivalent to ChanServ to other networks. It is our network will be Chan.': '__Chan is equivalent to ChanServ to other networks. It is our network will be Chan.'
+'Chan allows you to control various aspects of channels.': '__Chan allows you to control various aspects of channels.'
+'Chan can often prevent malicious users from "taking over" channels by limiting who is allowed channel operator privileges.': '__Chan can often prevent malicious users from "taking over" channels by limiting who is allowed channel operator privileges.'
+'Available commands are listed below; to use them, type /msg Chan command.': '__Available commands are listed below; to use them, type /msg Chan command.'
+'For more information on a specific command, type <b>/msg Chan HELP</b> command.': '__For more information on a specific command, type <b>/msg Chan HELP</b> command.'
+'The irc command register channel is disabled in network chats free. If you wish register the your channel,You are going to web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can register your channels here .': '__The irc command register channel is disabled in network chats free. If you wish register the your channel,You are going to web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can register your channels here .'
+'The irc command drop channel is disabled in network chats free. If you wish drop your channel, You are going dashboard in web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can delete your channels here .': '__The irc command drop channel is disabled in network chats free. If you wish drop your channel, You are going dashboard in web page <a href="https://www.chatsfree.net">https://www.chatsfree.net</a>, You can delete your channels here .'
+Account: Cuenta
