@@ -20,7 +20,7 @@ Channel: Canal
 'Quiero consulta la ayuda sobre...': 'Quiero consulta la ayuda sobre...'
 '¿ Que necesitas saber sobre tu canal ?': '¿ Que necesitas saber sobre tu canal ?'
 'Service Irc Commands to network chatsfree.net': 'Comandos irc en la red de chat'
-'Nick Commands available': 'Comandos dicponibles para nick'
+'Nick Commands available': 'Comandos disponibles para nick'
 'Introduction, tutorial': 'Introduccion, tutorial'
 nick.ajoin.index: 'Gestiona tu lista de auto entrada'
 nick.alist.index: 'Lista los canales a los que tienes acceso'

@@ -42,14 +42,10 @@
 			    Que es un nick o apodo
 			    {# answer #}
 			    <div data-js-panel-info="nick-1" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			 			<p>Un apodo es el nombre con el que se identificará en el chat.</p>
-			 			<p>Solo hay un apodo por email, es decir es único.</p>
-			 			<p>Y ningún otro usuario podrá utilizarlo.</p>
-			 			<p>Este apodo no puede contener espacios, comenzar pon números ni caracteres especiales como "#" o "&". </p>
-			 			</div>
-			 		</div>
+		 			<p>Un apodo es el nombre con el que se identificará en el chat.</p>
+		 			<p>Solo hay un apodo por email, es decir es único.</p>
+		 			<p>Y ningún otro usuario podrá utilizarlo.</p>
+		 			<p>Este apodo no puede contener espacios, comenzar pon números ni caracteres especiales como "#" o "&". </p>
 			    </div>
 			    {# end answer #}
 			  </div>
@@ -62,18 +58,14 @@
 	    			¿ Porqué debo registrar un nick ?
 	    			{# answer #}
 	    			<div data-js-panel-info="nick-2" style="display: none">
-	    				<div class="panel panel-default">
-				 			<div class="panel-body">
-					 			<p>
-						            En chateagratis.net no es necesario registrarse, puedes chatear con un nick de invitado, pero ese apodo
-						            sólo será tuyo durante el tiempo de conexión. Una vez salgas del chat podrá ser usado por otra persona.
-						        </p>
-						        <p>
-						            Si deseas que tu apodo sólo pueda ser usado por tí y que nadie más lo utilize, lo que debes hacer es registrar
-						            tu apodo. Esto además te permitirá acceder a múltiples opciones exclusivas sólo para usuarios registrados.
-						        </p>
-				 			</div>
-			 			</div>
+			 			<p>
+				            En chateagratis.net no es necesario registrarse, puedes chatear con un nick de invitado, pero ese apodo
+				            sólo será tuyo durante el tiempo de conexión. Una vez salgas del chat podrá ser usado por otra persona.
+				        </p>
+				        <p>
+				            Si deseas que tu apodo sólo pueda ser usado por tí y que nadie más lo utilize, lo que debes hacer es registrar
+				            tu apodo. Esto además te permitirá acceder a múltiples opciones exclusivas sólo para usuarios registrados.
+				        </p>
 	    			</div>
 	    			{# end answer #}
 	    		</div>
@@ -86,11 +78,7 @@
     				Como registrar nick/apodo
     			</div>
     			<div data-js-panel-info="not-nick-register" style="display: none">
-	    			<div class="panel panel-default">
-				 		<div class="panel-body">
-				 			{% include "HelpBundle:User:Info/register.html.twig" %}
-    					</div>
-    				</div>
+		 			{% include "HelpBundle:User:Info/register.html.twig" %}
     			</div>
     		</div>
     	</div>
@@ -102,21 +90,17 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="nick-error" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-				 			<ul>
-				 				<li>Para registrar tu nick necesitas tener un email válido. Donde te enviaremos un email para confimar tu cuenta.</li>
-					            <li>El nick que quieres registrar ya está registrado:
-					            	<ul>
-					            		<li>Deberás escoger otro nick diferente</li>
-					            		<li>Si has sido tú quien lo ha registrado pero no te acuerdas de la contraseña, dale al enlace de olvidé contraseña en <a href="{{ page_login }}">la página de login.</a></li>
-					            	</ul>
-					            </li>
-					            
-					            <li>Si tienes algún otro problema en el formulario de registro ponte en contacto con nosotros a través del email de contacto, o de nuestras redes sociales.</li>
-					        </ul>
-			 			</div>
-		 			</div>
+		 			<ul>
+		 				<li>Para registrar tu nick necesitas tener un email válido. Donde te enviaremos un email para confimar tu cuenta.</li>
+			            <li>El nick que quieres registrar ya está registrado:
+			            	<ul>
+			            		<li>Deberás escoger otro nick diferente</li>
+			            		<li>Si has sido tú quien lo ha registrado pero no te acuerdas de la contraseña, dale al enlace de olvidé contraseña en <a href="{{ page_login }}">la página de login.</a></li>
+			            	</ul>
+			            </li>
+			            
+			            <li>Si tienes algún otro problema en el formulario de registro ponte en contacto con nosotros a través del email de contacto, o de nuestras redes sociales.</li>
+			        </ul>
     			</div>
     			{# end answer #}
 			</div>
@@ -129,11 +113,7 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="nick-change" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-			 				{% include "HelpBundle:User:Info/change.html.twig" %}
-			 			</div>
-		 			</div>
+	 					{% include "HelpBundle:User:Info/change.html.twig" %}
     			</div>
     			{# end answer #}
 			</div>
@@ -154,18 +134,14 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="nick-registered-join" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-							<p>Debes tener una cuenta de usuario registrada y acceder a ella de la siguiente manera:</p>
-							{% include "HelpBundle:Account:Info/access.html.twig" %}
-							<p>Una vez estés identificado en la web, al acceder al chat, te entra automáticamente con tu nick.</p>
-							<p>Si no es así desde el chat puedes cambiarte el nick, escribiendo en el chat el comando:</p>
-							<p><code>/login TUNICK TUPASSWORD</code></p>
-							<p>Para el nick Barack_Obama y la contraseña "1234" será: </p>
-							<p><code>/login Barack_Obama 1234</code></p>
-							<p>También puedes consultar <a href="{{ path('ant_help_stepper_index') }}"> las intrucciones paso a paso con imagenes como cambiarte de nick</a>.</p>
-			 			</div>
-		 			</div>
+					<p>Debes tener una cuenta de usuario registrada y acceder a ella de la siguiente manera:</p>
+					{% include "HelpBundle:Account:Info/access.html.twig" %}
+					<p>Una vez estés identificado en la web, al acceder al chat, te entra automáticamente con tu nick.</p>
+					<p>Si no es así desde el chat puedes cambiarte el nick, escribiendo en el chat el comando:</p>
+					<p><code>/login TUNICK TUPASSWORD</code></p>
+					<p>Para el nick Barack_Obama y la contraseña "1234" será: </p>
+					<p><code>/login Barack_Obama 1234</code></p>
+					<p>También puedes consultar <a href="{{ path('ant_help_stepper_index') }}"> las intrucciones paso a paso con imagenes como cambiarte de nick</a>.</p>
     			</div>
     			{# end answer #}
 			</div>
@@ -177,18 +153,14 @@
 			    Como valido mi cuenta
 			    {# answer #}
 			    <div data-js-panel-info="nick-registered-validate" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-				 			<p>
-					            Para validar tu cuenta debes acudir a tu dirección de email introducida durante el registro. Recibirás
-					            un email desde la cuenta "Chat Gratis" con el asunto "Confirma tu cuenta".
-					        </p>
-					        <p>
-					           Abre el email y pulsa en el botón de "Confirma tu cuenta Ahora!"
-					        </p>
-					        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
-			 			</div>
-			 		</div>
+		 			<p>
+			            Para validar tu cuenta debes acudir a tu dirección de email introducida durante el registro. Recibirás
+			            un email desde la cuenta "Chat Gratis" con el asunto "Confirma tu cuenta".
+			        </p>
+			        <p>
+			           Abre el email y pulsa en el botón de "Confirma tu cuenta Ahora!"
+			        </p>
+			        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
 			    </div>
 			    {# end answer #}
 			  </div>
@@ -202,23 +174,19 @@
     			</div>
     			{# answer #}
 			    <div data-js-panel-info="nick-registered-not-received-email" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			    			<p>
-					           Si tu cuenta no está confirmada, puedes loguearte en la web igualmente. Una vez introduzcas tus credenciales verás en la parte superior de nuestra web el siguiente mensaje:
-					        </p>
-					        {% image '@HelpBundle/Resources/public/images/help/resend-email.png' %}
-					        <img src="{{ asset_url }}" alt="Reenviar email" />
-					        {% endimage %}
-					        <p>
-					           deberás pinchar en el enlace de ese mensaje e introducir el email con el que te has registrado en el formulario y pulsa el botón de "reenviarme email de confirmación"
-					        </p>
-					        <p><spam style="color:red;">Atención!!</spam> Solo verás un mensaje como el de arriba en tu página una vez hayas iniciado sesión en la web desde <a href="{{ path('_antwebes_chateaclient_login') }}">la página de login.</a></p>
-					        <p>
-					            Revisa tu carpeta de spam dentro de tu correo electrónico. Si el email está en esta carpeta márcalo como "No es spam".
-					        </p>
-						</div>
-					</div>
+	    			<p>
+			           Si tu cuenta no está confirmada, puedes loguearte en la web igualmente. Una vez introduzcas tus credenciales verás en la parte superior de nuestra web el siguiente mensaje:
+			        </p>
+			        {% image '@HelpBundle/Resources/public/images/help/resend-email.png' %}
+			        <img src="{{ asset_url }}" alt="Reenviar email" />
+			        {% endimage %}
+			        <p>
+			           deberás pinchar en el enlace de ese mensaje e introducir el email con el que te has registrado en el formulario y pulsa el botón de "reenviarme email de confirmación"
+			        </p>
+			        <p><spam style="color:red;">Atención!!</spam> Solo verás un mensaje como el de arriba en tu página una vez hayas iniciado sesión en la web desde <a href="{{ path('_antwebes_chateaclient_login') }}">la página de login.</a></p>
+			        <p>
+			            Revisa tu carpeta de spam dentro de tu correo electrónico. Si el email está en esta carpeta márcalo como "No es spam".
+			        </p>
 				</div>
 				{# end answer #}
     		</div>
@@ -230,30 +198,26 @@
 	    			Comandos irc
 	    			{# answer #}
 	    			<div data-js-panel-info="nick-registered-commands-irc" style="display: none">
-	    				<div class="panel panel-default">
-				 			<div class="panel-body">
-				 				<p>¿Donde escribo los comandos? Los comandos se escriben en la misma barra desde donde chateas con los demas usuarios, pero los comandos empiezan con /</p>
-					 			<p>Estos son algunos de los comandos mas útiles con nick</p>
-					 			<ul>
-					 				<li>Activar tu nick en el irc:
-					 					<ul>
-					 						<li><code>/msg nick identify TUNICK TUPASSWORD</code></li>
-					 					</ul>
-					 				</li>
-					 				<li>Cambiar de nick: 
-					 					<ul>
-					 						<li><code>/nick TUNUEVONICK</code></li>
-					 					</ul>
-					 				</li>
-					 				<li>Iniciar sesión en el chat irc: 
-					 					<ul>
-					 						<li><code>/login TUNICK TUPASSWORD</code></li>
-					 					</ul>
-					 				</li>
-					 			</ul>
-				 			</div>
-			 			</div>
-	    			</div>
+		 				<p>¿Donde escribo los comandos? Los comandos se escriben en la misma barra desde donde chateas con los demas usuarios, pero los comandos empiezan con /</p>
+			 			<p>Estos son algunos de los comandos mas útiles con nick</p>
+			 			<ul>
+			 				<li>Activar tu nick en el irc:
+			 					<ul>
+			 						<li><code>/msg nick identify TUNICK TUPASSWORD</code></li>
+			 					</ul>
+			 				</li>
+			 				<li>Cambiar de nick: 
+			 					<ul>
+			 						<li><code>/nick TUNUEVONICK</code></li>
+			 					</ul>
+			 				</li>
+			 				<li>Iniciar sesión en el chat irc: 
+			 					<ul>
+			 						<li><code>/login TUNICK TUPASSWORD</code></li>
+			 					</ul>
+			 				</li>
+			 			</ul>
+		 			</div>
 	    			{# end answer #}
 	    		</div>
 			</div>
@@ -266,17 +230,13 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="nick-registered-not-exist" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-				 			<p>Si tu nick no existe en irc, puede ser por dos motivos:</p>
-				 			<ul>
-				 				<li>Tu nick ha caducado en el chat</li>
-				 				<li>Nunca has entrado al chat con ese nick</li>
-				 			</ul>
-				 			<p>La solución es iniciar sesión en la web, y acceder al chat, con tu nick.</p>
-				 			<p>Si sigue sin estar registrado tu nick, escribe el comando: <code>/msg nick identify TUNICK TUPASSWORD</code></p>
-			 			</div>
-		 			</div>
+		 			<p>Si tu nick no existe en irc, puede ser por dos motivos:</p>
+		 			<ul>
+		 				<li>Tu nick ha caducado en el chat</li>
+		 				<li>Nunca has entrado al chat con ese nick</li>
+		 			</ul>
+		 			<p>La solución es iniciar sesión en la web, y acceder al chat, con tu nick.</p>
+		 			<p>Si sigue sin estar registrado tu nick, escribe el comando: <code>/msg nick identify TUNICK TUPASSWORD</code></p>
     			</div>
     			{# end answer #}
 			</div>
@@ -288,11 +248,7 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="nick-registered-password" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-							{% include "HelpBundle:User:Info/password.html.twig" %}
-			 			</div>
-		 			</div>
+					{% include "HelpBundle:User:Info/password.html.twig" %}
     			</div>
     			{# end answer #}
 			</div>

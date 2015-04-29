@@ -62,12 +62,8 @@
 			  <div class="panel-body" data-js-panel="channel-owner-add-moderator">
 			    Moderadores
 			    {# answer #}
-			    <div data-js-panel-info="channel-owner-add-moderator" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			 				{% include "HelpBundle:Channel:Info/moderators.html.twig" %}		 				
-			 			</div>
-			 		</div>
+			    <div data-js-panel-info="channel-owner-add-moderator" style="display: none">	
+					{% include "HelpBundle:Channel:Info/moderators.html.twig" %}
 			    </div>
 			    {# end answer #}
 			  </div>
@@ -80,11 +76,7 @@
 	    			Como cambio el topic
 	    			{# answer #}
 	    			<div data-js-panel-info="channel-owner-topic" style="display: none">
-	    				<div class="panel panel-default">
-				 			<div class="panel-body">
-					 			{% include "HelpBundle:Channel:Info/topic.html.twig" %}
-				 			</div>
-			 			</div>
+			 			{% include "HelpBundle:Channel:Info/topic.html.twig" %}
 	    			</div>
 	    			{# end answer #}
 	    		</div>
@@ -98,11 +90,7 @@
 	    		</div>
 	    		{# answer #}
 	    		<div data-js-panel-info="channel-owner-delete-moderator" style="display: none">
-    				<div class="panel panel-default">
-			 			<div class="panel-body">
-							{% include "HelpBundle:Channel:Info/receive-attacks.html.twig" %}
-			 			</div>
-		 			</div>
+					{% include "HelpBundle:Channel:Info/receive-attacks.html.twig" %}
     			</div>
     			{# end answer #}
 			</div>
@@ -121,13 +109,9 @@
 			    ¿ Quien puede registrar un canal ?
 			    {# answer #}
 			    <div data-js-panel-info="nick-registered-validate" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-				 			<p>Cualquier usuario puede registrar canales. Es y será algo gratuito.</p>
-					        <p>Solo debes estar registrado. Para ello solo debes rellenar el <a href="{{ page_register }}">formulario de registro.</a></p>
-					        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
-			 			</div>
-			 		</div>
+		 			<p>Cualquier usuario puede registrar canales. Es y será algo gratuito.</p>
+			        <p>Solo debes estar registrado. Para ello solo debes rellenar el <a href="{{ page_register }}">formulario de registro.</a></p>
+			        <p>Hasta que valides tu cuenta, tu nick no será reservado, así que no tardes y validala cuanto antes.</p>
 			    </div>
 			    {# end answer #}
 			  </div>
@@ -141,13 +125,9 @@
     			</div>
     			{# answer #}
 			    <div data-js-panel-info="nick-registered-not-received-email" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			    			<p>Primero debes tener una cuenta de usuario creada.</p>
-			    			<p>Si no la tienes vete a la <a href="{{ page_register }}">página de registro.</a></p>
-			    			<p>Si ya tienes una cuenta de usuario debes de estar logueado, y una vez hayas iniciado sesión podrás registrar tu canal desde <a href="{{ page_register_channel }}">el formulario de crear canal.</a></p>
-						</div>
-					</div>
+	    			<p>Primero debes tener una cuenta de usuario creada.</p>
+	    			<p>Si no la tienes vete a la <a href="{{ page_register }}">página de registro.</a></p>
+	    			<p>Si ya tienes una cuenta de usuario debes de estar logueado, y una vez hayas iniciado sesión podrás registrar tu canal desde <a href="{{ page_register_channel }}">el formulario de crear canal.</a></p>
 				</div>
 				{# end answer #}
     		</div>
@@ -159,15 +139,11 @@
 	    			Lo he intentado pero he tenido problemas
 	    			{# answer #}
 	    			<div data-js-panel-info="nick-registered-commands-irc" style="display: none">
-	    				<div class="panel panel-default">
-				 			<div class="panel-body">
-				 				<p>Si has seguido todo los pasos, tienes cuenta de usuario ya confirmada y has rellenado el formulario de registrar canal, quizás haya sido un error puntual, vuelva a intentarlo dentro de unos minutos.</p>
-				 				<p>Si el problema persiste..</p>
-				 				<p>Entra en el chat al canal #ayuda quizás allí puedan ayudarte con tu problema.</p>
-				 				<p>Envianos un correo a nuestro email de contacto, enviándonos toda la información posible.</p>
-				 				<p>Puedes encontrar el formulario de contacto al final de la página.</p>
-				 			</div>
-			 			</div>
+		 				<p>Si has seguido todo los pasos, tienes cuenta de usuario ya confirmada y has rellenado el formulario de registrar canal, quizás haya sido un error puntual, vuelva a intentarlo dentro de unos minutos.</p>
+		 				<p>Si el problema persiste..</p>
+		 				<p>Entra en el chat al canal #ayuda quizás allí puedan ayudarte con tu problema.</p>
+		 				<p>Envianos un correo a nuestro email de contacto, enviándonos toda la información posible.</p>
+		 				<p>Puedes encontrar el formulario de contacto al final de la página.</p>
 	    			</div>
 	    			{# end answer #}
 	    		</div>
@@ -186,11 +162,7 @@
 			    ¿ Como me hago moderador de un canal ?
 			    {# answer #}
 			    <div data-js-panel-info="channel-foreign-ascend" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			 				{% include "HelpBundle:Channel:Info/ascend.html.twig" %}
-			 			</div>
-			 		</div>
+					{% include "HelpBundle:Channel:Info/ascend.html.twig" %}
 			    </div>
 			    {# end answer #}
 			  </div>
@@ -204,11 +176,7 @@
     			</div>
     			{# answer #}
 			    <div data-js-panel-info="channel-foreign-incorrect-behavior" style="display: none">
-			    	<div class="panel panel-default">
-			 			<div class="panel-body">
-			 				{% include "HelpBundle:Channel:Info/incorrect-behavior.html.twig" %}
-						</div>
-					</div>
+			 		{% include "HelpBundle:Channel:Info/incorrect-behavior.html.twig" %}
 				</div>
 				{# end answer #}
     		</div>
