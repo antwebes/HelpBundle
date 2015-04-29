@@ -28,8 +28,7 @@
 
 </style>
 	{# Begin of first two buttons #}
-	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Toda la ayuda sobre los canales de chateagratis.net{% endtrans %}</h1>
-    <h2 style="text-align: center;margin-bottom:20px;">{% trans %}Quiero consulta la ayuda sobre...{% endtrans %}</h2>
+    <h1 style="text-align: center;margin-bottom:20px;">{% trans %}Quiero consulta la ayuda sobre...{% endtrans %}</h1>
     <div class="row">
     	<div class="col-xs-12 col-md-4">
     		<button data-js-btn="channel-owner" type="button" style="min-height: 100px;" class="btn btn-default btn-lg btn-block">
@@ -189,13 +188,8 @@
     <div id="answer" style="display: none" class="text-help">
     </div>
     {# endblock to show answer #}
-	
-	{# Begin block adsense #}
-	<hr/>	
-	<div class="row">
-		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
-	</div>
-	{# End block adsense #}
+
+    {% include "HelpBundle::end.html.twig" %}
 
 {% endblock %}
 

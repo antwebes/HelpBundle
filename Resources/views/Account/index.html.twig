@@ -78,12 +78,7 @@
 	    </div>
 	  </div>
 	</div>
-	
-	{# Begin block adsense #}
-	<hr/>	
-	<div class="row">
-		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
-	</div>
-	{# End block adsense #}
+
+    {% include "HelpBundle::end.html.twig" %}
 
 {% endblock %}

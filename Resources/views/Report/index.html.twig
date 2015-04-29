@@ -6,14 +6,62 @@
 
 	{# Begin of first two buttons #}
 	<h1 style="text-align: center;margin-bottom:20px;">{% trans %}Denuncias sobre el chat{% endtrans %}</h1>
-    
-    <p>Envíanos un correo con toda la información posible a {{ email_contact }}</p>
-    
-	{# Begin block adsense #}
-	<hr/>	
-	<div class="row">
-		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
-	</div>
-	{# End block adsense #}
 
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Estan enviando tu <b>teléfono</b>, <b>email</b> o <b>dirección</b> a través del chat?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+
+                    <p>Esta página es un chat en tiempo real, los datos de la conversación no se guardan en esta página, ni en ningún otro sitio.</p>
+
+                    <p>En nuestro chat solemos banear a esta gente canales generales, pero si alguien lo realiza por privado bloquear al usuario es imposbile.</p>
+
+                    <br>
+                    <h2>¿Cómo puedo protegerme ante una suplantación de identidad?</h2>
+                    <br>
+
+
+                    <p>Nosotros registramos el nick de entrada, la hora de conexión junto a la dirección IP del usuario, estas tres cosas nos permiten identificar un infractor, pero estes datos no podemos dárselos a usted, sólamente a la policía.</p>
+
+                    <p>Por lo tanto usted tiene que denunciar a este infractor, la policía se pone en contacto con nosotros y nosotros le pasamos los datos a ellos.
+                    Estos datos solo pueden ser cedidos a los miembros de los cuerpos de seguridad del estado, previa presentación por parte del interesado de la correspondiente denuncia, ni siquiera los moderadores de sala tienen acceso a esos datos.</p>
+
+                    <br>
+                    <h2>Consejo.</h2>
+
+                    <p>Lo que usted debe hacer es, la próxima vez que reciba una llamada, correo electrónico o whatsapp preguntarle al emisor los siguientes datos:<p>
+                    <p>El apodo del infractor y apuntar la hora en que se produce. Todo esto será necesario para presentar la denuncia ante la policía y será ella quien se ponga en contacto con nostros.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Me han expulsado indebidamente de un canal
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+
+                {% include "HelpBundle:Channel:Info/incorrect-behavior.html.twig" %}
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {% include "HelpBundle::end.html.twig" %}
+    
 {% endblock %}

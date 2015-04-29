@@ -1,8 +1,7 @@
-{% extends '::layout1column.html.twig' %}
+{% extends 'HelpBundle::layout.html.twig' %}
 
 {% block body_container_center %}
-    <h1 style="text-align: center;margin-bottom:20px;">{% trans %}Ayuda sobre chateagratis.net{% endtrans %}</h1>
-    <h2 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Sobre que tema necesitas ayuda ?{% endtrans %}</h2>
+    <h1 style="text-align: center;margin-bottom:20px;">{% trans %}¿ Sobre que tema necesitas ayuda ?{% endtrans %}</h1>
     <div class="row">
     	<div class="col-xs-6 col-md-4" style="margin-bottom:5%">
             <a href="{{ path('ant_help_nick_index') }}">
@@ -35,11 +34,7 @@
             </a>
         </div>
     </div>
-	<hr/>
-	<div class="row">
-		{% include 'CoreBundle:Ads:adsense-responsive-horizontal.html.twig' with {class: 'chateagratis-salas-responsive', slot: '3071305701'} %}
-	</div>
-	
+
 
 {% endblock %}
 
