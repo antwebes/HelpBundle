@@ -1,3 +1,5 @@
+{% extends "HelpBundle::base.html.twig" %}
+
 {% set page_register = path("chatea_client_register_user") %}
 {% set page_login = path("_antwebes_chateaclient_login") %}
 {% set page_register_channel = path("chatea_client_register_channel") %}
@@ -5,6 +7,7 @@
 {% set page_user_settings = path('chatea_client_user_settings') %}
 
 {% block head_css %}
+	{{ parent() }}
 	{% block styles_head_css %}
 		<style>
 			.text-align-center {
