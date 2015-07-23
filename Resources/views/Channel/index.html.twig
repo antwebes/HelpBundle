@@ -49,8 +49,10 @@
 	{# End of first two buttons #}
     <hr/>
     
-    {# Here append with jquery options for each data-js-btn #}
-    <div class="row" data-js="show-options"></div>
+    {# Here append info with jquery options for each data-js-btn #}
+    <div class="row" data-js="show-options">
+    	<center>{% trans %}Para entrar en un canal debes de escribir en el chat lo siguiente: ( no olvides empezar con / ) <p><b>/join &nbsp;&nbsp; #canal</b></p>{% endtrans %}</center>
+    </div>
 
     {# Begin of channel-owner options #}
     <div data-js-show="channel-owner" style="display: none" >
